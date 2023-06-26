@@ -5,6 +5,7 @@ interface ProjectProps extends JSX.HTMLAttributes<HTMLDivElement> {
     url?: string;
     desc: string;
     imagePath?: string;
+    icons?: Array<string>;
 }
 
 export type {

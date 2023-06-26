@@ -18,9 +18,17 @@ export const handler: Handlers<HomeProps> = {
 };
 
 const testProject: ProjectProps = {
+  name: 'Rock Paper Scissors Game',
+  url: 'https://jake-abed.github.io/rock-paper-scissors/',
+  imagePath: '/rps-screenshot.png',
+  desc: 'A simple, quick game of RPS. First to five wins. All art and designs are original.',
+  icons: ['/badges/html5-badge.png', '/badges/css-logo.png', '/badges/js-logo.png']
+}
+
+const testProject2: ProjectProps = {
   name: 'Cheap Dog',
   url: 'https://jakeabed.dev',
-  imagePath: './static/favicon.ico',
+  imagePath: '/rps-screenshot.png',
   desc: 'A cheap dog made of fresh meat and bones.'
 }
 
@@ -39,10 +47,19 @@ export default function Home(props: PageProps<HomeProps>) {
         <div class="bg-pink-200 p-4 mx-auto my-4 w-9/12">
           <Counter start={props.data.start} />
         </div>
-        <Project class="mx-auto w-9/12 bg-pink-400" url = {testProject.url}
-        name = {testProject.name}
-        desc = {testProject.desc}
-        ></Project>
+        <div class="flex mx-auto w-9/12">
+          <Project class="mx-auto w-9/12 bg-pink-400"
+            url = {testProject.url}
+            name = {testProject.name}
+            desc = {testProject.desc}
+            imagePath= {testProject.imagePath}>
+          </Project>
+          <Project class="mx-auto w-9/12 bg-pink-400"
+            url = {testProject2.url}
+            name = {testProject2.name}
+            desc = {testProject2.desc}>
+          </Project>
+        </div>
       </body>
       
     </>
