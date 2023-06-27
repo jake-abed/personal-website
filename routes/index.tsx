@@ -47,14 +47,15 @@ export default function Home(props: PageProps<HomeProps>) {
         <div class="bg-pink-200 p-4 mx-auto my-4 w-9/12">
           <Counter start={props.data.start} />
         </div>
-        <div class="flex mx-auto w-9/12">
-          <Project class="mx-auto w-9/12 bg-pink-400"
+        <div class="flex mx-auto w-9/12 gap-4 flex-wrap">
+          <Project class="mx-auto max-w-xs p-4 flex flex-col items-center bg-pink-50 border-1 border-black flex-wrap"
             url = {testProject.url}
             name = {testProject.name}
             desc = {testProject.desc}
-            imagePath= {testProject.imagePath}>
+            imagePath= {testProject.imagePath}
+            icons={testProject.icons}>
           </Project>
-          <Project class="mx-auto w-9/12 bg-pink-400"
+          <Project class="mx-auto max-w-xs p-4 flex flex-col items-center bg-pink-50 border-1 border-black flex-wrap"
             url = {testProject2.url}
             name = {testProject2.name}
             desc = {testProject2.desc}>

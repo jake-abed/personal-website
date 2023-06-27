@@ -4,17 +4,17 @@ import { ProjectProps } from "../utils/interfaces.ts";
 
 export function Project(props: ProjectProps) {
     return (
-        <div
-            class={props.class + "mx-auto p-4 flex flex-wrap bg-pink-50"}
-            id={props.id ? props.id : ''}
-        >
-            <div class="p-4 br-2 mx-auto rounded-md border-black border-2 w11/12">
-                <a target="_blank" href={props.url} >
-                    <img src={props.imagePath}></img>
-                </a>
-                <h3>{props.name}</h3>
-                <p>{props.desc}</p>
-                
+        <div class={props.class}
+            id={props.id ? props.id : ''}>
+            <a target="_blank" href={props.url} >
+                <img src={props.imagePath}></img>
+            </a>
+            <a target="_blank" href={props.url}>
+                <h3 class="font-bold">{props.name}</h3>
+            </a>
+            <p>{props.desc}</p>
+            <div class="flex flex-cols gap-4 justify-center">
+                {props.icons?.map(icon => <img width="32" height="32" src={icon}></img>)}
             </div>
         </div>
     )
