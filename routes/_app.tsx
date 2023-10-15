@@ -23,7 +23,7 @@ export default function App({ Component }: AppProps) {
         >
         </link>
         <link
-          href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Monoton&family=Noto+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700;1,800&family=Syne+Mono&display=swap"
           rel="stylesheet"
         >
         </link>

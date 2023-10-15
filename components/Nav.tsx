@@ -14,7 +14,7 @@ export function Nav(props: NavElement) {
       <ul class="flex items-center flex-wrap gap-8">
         {props.sections.map((section) => (
           <a href={"#" + section.replace(" ", "")}>
-            <li class="font-bold">{section}</li>
+            <li class="font-bold font-noto">{section}</li>
           </a>
         ))}
       </ul>
