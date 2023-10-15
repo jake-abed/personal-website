@@ -18,19 +18,24 @@ export const handler: Handlers<HomeProps> = {
 };
 
 const testProject: ProjectProps = {
-  name: 'Rock Paper Scissors Game',
-  url: 'https://jake-abed.github.io/rock-paper-scissors/',
-  imagePath: '/rps-screenshot.png',
-  desc: 'A simple, quick game of RPS. First to five wins. All art and designs are original.',
-  icons: ['/badges/html5-badge.png', '/badges/css-logo.png', '/badges/js-logo.png']
-}
+  name: "Rock Paper Scissors Game",
+  url: "https://jake-abed.github.io/rock-paper-scissors/",
+  imagePath: "/rps-screenshot.png",
+  desc:
+    "A simple, quick game of RPS. First to five wins. All art and designs are original.",
+  icons: [
+    "/badges/html5-badge.png",
+    "/badges/css-logo.png",
+    "/badges/js-logo.png",
+  ],
+};
 
 const testProject2: ProjectProps = {
-  name: 'Cheap Dog',
-  url: 'https://jakeabed.dev',
-  imagePath: '/rps-screenshot.png',
-  desc: 'A cheap dog made of fresh meat and bones.'
-}
+  name: "Cheap Dog",
+  url: "https://jakeabed.dev",
+  imagePath: "/basilisk-library.png",
+  desc: "A cheap dog made of fresh meat and bones.",
+};
 
 export default function Home(props: PageProps<HomeProps>) {
   return (
@@ -44,25 +49,19 @@ export default function Home(props: PageProps<HomeProps>) {
             Welcome to Jake Abed's in progress portfolio.
           </p>
         </div>
-        <div class="bg-pink-200 p-4 mx-auto my-4 w-9/12">
-          <Counter start={props.data.start} />
-        </div>
         <div class="flex mx-auto w-9/12 gap-4 flex-wrap">
-          <Project class="mx-auto max-w-xs p-4 flex flex-col items-center bg-pink-50 border-1 border-black flex-wrap"
-            url = {testProject.url}
-            name = {testProject.name}
-            desc = {testProject.desc}
-            imagePath= {testProject.imagePath}
-            icons={testProject.icons}>
+          <Project
+            class="mx-auto max-w-xs p-4 flex flex-col items-center bg-pink-50 border-1 border-black flex-wrap"
+            {...testProject}
+          >
           </Project>
-          <Project class="mx-auto max-w-xs p-4 flex flex-col items-center bg-pink-50 border-1 border-black flex-wrap"
-            url = {testProject2.url}
-            name = {testProject2.name}
-            desc = {testProject2.desc}>
+          <Project
+            class="mx-auto max-w-xs p-4 flex flex-col items-center bg-pink-50 border-1 border-black flex-wrap"
+            {...testProject2}
+          >
           </Project>
         </div>
       </body>
-      
     </>
   );
 }
