@@ -11,9 +11,18 @@ export default {
       colors: {
         "light-green": "#96E072",
         "black": "#050517",
+        "red": "#FF4242",
+        "white": "#FFFBFF",
       },
       boxShadow: {
-        "brutal": "2px 2px 1px 3px #050517",
+        "brutal": "3px 3px 0px 3px #050517",
+        "brutal-red": "2px 2px 0px 2px #FF4242",
+      },
+      dropShadow: {
+        "text": "0px 0px 30px black",
+      },
+      transitionProperty: {
+        "height": "height",
       },
     },
   },

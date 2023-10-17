@@ -1,5 +1,5 @@
 import { AppProps } from "$fresh/server.ts";
-import { Nav } from "../components/Nav.tsx";
+import { Nav } from "../islands/Nav.tsx";
 
 const navSections = [
   "Home",
