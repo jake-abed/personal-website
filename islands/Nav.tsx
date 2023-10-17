@@ -40,7 +40,7 @@ export function Nav(props: NavElement) {
       >
         JAKE ABED
       </h1>
-      <ul class="nav-options flex flex-col flex-wrap lg:gap-8 hidden lg:flex-row lg:items-center">
+      <ul class="nav-options flex flex-col flex-wrap lg:gap-8 hidden lg:flex lg:flex-row lg:items-center">
         {props.sections.map((section) => (
           <a href={"#" + section.replace(" ", "")}>
             <li
