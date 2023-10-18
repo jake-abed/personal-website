@@ -21,9 +21,6 @@ export default {
       dropShadow: {
         "text": "0px 0px 30px black",
       },
-      transitionProperty: {
-        "height": "height",
-      },
     },
   },
 } as Options;

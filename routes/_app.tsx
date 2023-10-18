@@ -1,13 +1,4 @@
 import { AppProps } from "$fresh/server.ts";
-import { Nav } from "../islands/Nav.tsx";
-
-const navSections = [
-  "Home",
-  "About Me",
-  "Projects",
-  "Skills",
-  "Contact Me",
-];
 
 export default function App({ Component }: AppProps) {
   return (
@@ -30,7 +21,6 @@ export default function App({ Component }: AppProps) {
         <title>Jake Abed's Portfolio</title>
       </head>
       <body>
-        <Nav sections={navSections} />
         <Component />
       </body>
     </html>

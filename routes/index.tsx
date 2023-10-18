@@ -1,6 +1,7 @@
 import type { Handlers, PageProps } from "$fresh/server.ts";
 import { Head } from "$fresh/runtime.ts";
 import { getCount } from "../utils/db.ts";
+import { Nav } from "../components/Nav.tsx";
 import { Project } from "../components/Project.tsx";
 import { ProjectProps } from "../utils/interfaces.ts";
 
@@ -55,6 +56,12 @@ const project3: ProjectProps = {
   ],
 };
 
+const navSections = [
+  "Home",
+  "Projects",
+  "Contact Me",
+];
+
 export default function Home(props: PageProps<HomeProps>) {
   return (
     <>
@@ -62,6 +69,7 @@ export default function Home(props: PageProps<HomeProps>) {
         <title>Jake Abed's Portfolio</title>
       </Head>
       <body class="w-screen bg-slate-900">
+        <Nav sections={navSections} />
         <div class="px-4 py-8 mx-auto w-full bg-light-green">
           <h2 class="font-bold font-noto">
             Welcome to Jake Abed's in progress portfolio.
@@ -73,7 +81,10 @@ export default function Home(props: PageProps<HomeProps>) {
             well. Don't be afraid to get in touch!
           </p>
         </div>
-        <div class="flex justify-center mx-auto py-4 w-11/12 gap-4 flex-wrap">
+        <div
+          id="Projects"
+          class="flex justify-center mx-auto py-4 w-11/12 gap-4 flex-wrap"
+        >
           <Project
             class="p-4 flex flex-col items-center bg-light-green flex-wrap"
             {...project1}
