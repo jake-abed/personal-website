@@ -68,13 +68,13 @@ export default function Home(props: PageProps<HomeProps>) {
       <Head>
         <title>Jake Abed's Portfolio</title>
       </Head>
-      <body class="w-screen bg-slate-900">
+      <body class="w-screen min-h-screen flex flex-col bg-slate-900">
         <Nav sections={navSections} />
-        <div class="px-4 py-8 mx-auto w-full bg-light-green">
-          <h2 class="font-bold font-noto">
-            Welcome to Jake Abed's in progress portfolio.
+        <div class="px-12 py-16 mx-auto w-full bg-light-green">
+          <h2 class="font-extrabold text-2xl font-noto leading-[1.6rem] pb-4">
+            Thoughtful, Different, Web Development
           </h2>
-          <p class="max-w-lg">
+          <p class="max-w-lg font-medium text-md leading-[1.35rem]">
             Thank you for stopping by. While I consider this site very much
             'Under Construction', I firmly believe that it successfully
             demonstrates my abilities and can show you a little about me as
@@ -83,7 +83,7 @@ export default function Home(props: PageProps<HomeProps>) {
         </div>
         <div
           id="Projects"
-          class="flex justify-center mx-auto py-4 w-11/12 gap-4 flex-wrap"
+          class="flex justify-center mx-auto py-8 w-11/12 gap-6 flex-wrap"
         >
           <Project
             class="p-4 flex flex-col items-center bg-light-green flex-wrap"
@@ -100,6 +100,16 @@ export default function Home(props: PageProps<HomeProps>) {
             {...project3}
           >
           </Project>
+        </div>
+        <div class="static bottom-0 w-full p-4 mt-auto bg-red flex justify-center">
+          <a href="https://fresh.deno.dev">
+            <img
+              width="197"
+              height="37"
+              src="https://fresh.deno.dev/fresh-badge.svg"
+              alt="Made with Fresh"
+            />
+          </a>
         </div>
       </body>
     </>
