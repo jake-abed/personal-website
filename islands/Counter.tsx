@@ -1,4 +1,4 @@
-import { type StateUpdater, useState } from "preact/hooks";
+import { useState } from "preact/hooks";
 import { Button } from "../components/Button.tsx";
 
 interface CounterProps {
