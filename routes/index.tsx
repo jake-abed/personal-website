@@ -103,7 +103,6 @@ export default function Home(props: PageProps<HomeProps>) {
           </Project>
         </div>
         <div class="w-full bg-green">
-          <Contact></Contact>
         </div>
         <div class="static bottom-0 w-full p-4 mt-auto bg-red flex justify-center">
           <a href="https://fresh.deno.dev">
