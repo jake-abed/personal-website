@@ -3,6 +3,7 @@ import { Head } from "$fresh/runtime.ts";
 import { getCount } from "../utils/db.ts";
 import { Nav } from "../components/Nav.tsx";
 import { Project } from "../components/Project.tsx";
+import Contact from "../islands/Contact.tsx";
 import { ProjectProps } from "../utils/interfaces.ts";
 
 interface HomeProps {
@@ -100,6 +101,9 @@ export default function Home(props: PageProps<HomeProps>) {
             {...project3}
           >
           </Project>
+        </div>
+        <div class="w-full bg-green">
+          <Contact></Contact>
         </div>
         <div class="static bottom-0 w-full p-4 mt-auto bg-red flex justify-center">
           <a href="https://fresh.deno.dev">
