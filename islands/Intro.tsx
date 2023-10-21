@@ -1,4 +1,5 @@
-import { useState } from "https://esm.sh/preact@10.18.1/hooks";
+import { useEffect, useState } from "https://esm.sh/preact@10.18.1/hooks";
+import { chooseRandomElement } from "../utils/helpers.ts";
 
 const webDevAdjectives = [
   "Thoughtful",
@@ -13,8 +14,14 @@ const webDevAdjectives = [
 ];
 
 export default function Intro() {
-  const [send, setSend] = useState("inactive");
-  const adjective = "Hi";
+  const [adjective, setAdj] = useState("Thoughtful");
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setAdj(chooseRandomElement(webDevAdjectives));
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [adjective]);
 
   return (
     <div class="px-12 py-16 mx-auto w-full bg-light-green">

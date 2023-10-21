@@ -84,7 +84,9 @@ export default function Contact() {
           <p class="text-right font-medium text-black font-noto leading-[1.35rem]">
             Feel free to reach out about anything whatsoever! Want to chat? Need
             help on a project? Have a job offer? Whatever the reason, I'm always
-            happy to chat.
+            happy to chat. This contact element is currently disabled while I
+            flesh out the backend a bit. Shoot me an email at admin@jakeabed.dev
+            for now.
           </p>
         </div>
       </div>
