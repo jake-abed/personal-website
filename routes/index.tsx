@@ -21,9 +21,9 @@ export const handler: Handlers<HomeProps> = {
 };
 
 const navSections = [
-  "Home",
   "Projects",
   "Contact Me",
+  "About",
 ];
 
 export default function Home(props: PageProps<HomeProps>) {
@@ -36,7 +36,7 @@ export default function Home(props: PageProps<HomeProps>) {
         <Nav sections={navSections} />
         <Intro></Intro>
         <div
-          id="Projects"
+          id="projects"
           class="flex justify-center mx-auto py-8 w-11/12 gap-6 flex-wrap"
         >
           {projects.map((project) => {

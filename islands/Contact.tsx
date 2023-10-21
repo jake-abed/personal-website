@@ -7,6 +7,7 @@ export default function Contact() {
     <div class="w-screen bg-light-green flex flex-col items-center justify-center px-4 py-8">
       <div class="flex flex-col items-center justify-center w-[90dvw] md:flex-row md:w-[60dvw] gap-8">
         <form
+          id="contactme"
           class="flex flex-col shrink-0 bg-red shadow-brutal rounded-xl grow min-w-[300px] py-6 px-8 gap-4"
           method="POST"
           action="/api/contact"
