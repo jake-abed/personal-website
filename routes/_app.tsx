@@ -1,4 +1,5 @@
 import { AppProps } from "$fresh/server.ts";
+import { asset } from "https://deno.land/x/fresh@1.5.2/runtime.ts";
 
 export default function App({ Component }: AppProps) {
   return (
@@ -18,6 +19,7 @@ export default function App({ Component }: AppProps) {
           rel="stylesheet"
         >
         </link>
+        <link rel="stylesheet" href={asset("global.css")} />
         <title>Jake Abed's Portfolio</title>
       </head>
       <body>

@@ -1,5 +1,5 @@
 import { Handlers } from "$fresh/server.ts";
-import { sendSimpleMail } from "https://deno.land/x/sendgrid@0.0.3/mod.ts";
+import { default as mailer } from "npm:@sendgrid/mail";
 
 interface ContactData {
   firstName: string | null;
@@ -8,16 +8,10 @@ interface ContactData {
   message: string | null;
 }
 
-interface SGError {
-  message: string;
-  field: unknown;
-  help: unknown;
-}
-
-interface SGResp {
-  success: boolean;
-  errors?: Array<SGError>;
-}
+Deno.env.set(
+  "SENDGRID_API_KEY",
+  "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",
+);
 
 const key = Deno.env.get("SENDGRID_API_KEY");
 
@@ -32,21 +26,23 @@ export const handler: Handlers = {
       message: String(form.get("message")),
     };
 
-    const email: SGResp = await sendContactEmail(emailData);
+    try {
+      const email = await sendContactEmail(emailData);
 
-    console.log(email);
+      console.log(email);
 
-    if (email.success) {
-      return new Response(null, { status: 204 });
-    } else {
-      const errorMessage = email.errors?.map((entry) => entry?.message).join(
-        ", ",
-      );
-      return new Response(
-        errorMessage +
-          " - if this error persists, please contact admin@jakeabed.dev.",
-        { status: 403 },
-      );
+      if (email.statusCode) {
+        return new Response(null, { status: 204 });
+      } else {
+        const errorMessage = String(email.message);
+        return new Response(
+          errorMessage +
+            " - if this error persists, please contact admin@jakeabed.dev.",
+          { status: 403 },
+        );
+      }
+    } catch (e) {
+      return new Response(e, { status: 500 });
     }
   },
 };
@@ -55,26 +51,21 @@ async function sendContactEmail(emailData: ContactData) {
   const sender = emailData.firstName + " " + emailData.lastName;
   const subject = `Hello from ${sender}!`;
 
-  const email = await sendSimpleMail(
-    {
-      subject: subject,
-      to: [{ email: "jakeabed@gmail.com" }],
-      from: { email: "admin@jakeabed.dev" },
-      content: [
-        {
-          type: "text/plain",
-          value: emailData.message + " from " + emailData.email,
-        },
-        {
-          type: "text/html",
-          value: `<p>${emailData.message} from ${emailData.email}</>`,
-        },
-      ],
-    },
-    {
-      apiKey: key + "doog",
-    },
-  );
+  const msg = {
+    to: "jakeabed@gmail.com",
+    from: "admin@jakeabed.dev",
+    subject: subject,
+    text: emailData.message + " from " + emailData.email,
+    html: `<p>${emailData.message} from ${emailData.email}</>`,
+  };
 
-  return email as SGResp;
+  if (typeof key === "string") mailer.setApiKey(key);
+  else throw new Error("Invalid API key.");
+
+  try {
+    const email = await mailer.send(msg);
+    return email;
+  } catch (e) {
+    return e;
+  }
 }
