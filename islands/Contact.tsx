@@ -1,7 +1,48 @@
 import { useState } from "https://esm.sh/preact@10.18.1/hooks";
 
 export default function Contact() {
-  const [send, setSend] = useState("inactive");
+  const [sending, setSending] = useState(false);
+  const [resp, setResp] = useState("");
+
+  async function sendEmail() {
+    setSending(true);
+    setResp("");
+    const headers = new Headers();
+    const firstName = document.querySelector("#first-name") as HTMLInputElement;
+    const lastName = document.querySelector("#last-name") as HTMLInputElement;
+    const email = document.querySelector("#email") as HTMLInputElement;
+    const message = document.querySelector("#message") as HTMLTextAreaElement;
+    headers.set("firstName", firstName.value);
+    headers.set("lastName", lastName.value);
+    headers.set("email", email.value);
+    headers.set("message", message.value);
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: headers,
+    });
+    switch (res.status) {
+      case 500:
+        setResp(
+          "Oops! It looks like there was a server error. If this continues, please email admin@jakeabed.dev through your email client of choice.",
+        );
+        break;
+      case 403:
+        setResp(
+          "We couldn't send your email. It somehow snuck through with bad data. Try again with different values in the form.",
+        );
+        break;
+      case 204:
+        setResp("Your email was sent. I'll be in touch as soon as possible!");
+        break;
+      case 202:
+        setResp("Your email was sent. I'll be in touch as soon as possible!");
+        break;
+      default:
+        setResp("Huh? What the heck just happened?!");
+        break;
+    }
+    setSending(false);
+  }
 
   return (
     <div class="w-screen bg-light-green flex flex-col items-center justify-center px-4 py-8">
@@ -9,7 +50,6 @@ export default function Contact() {
         <form
           id="contactme"
           class="flex flex-col shrink-0 bg-red shadow-brutal rounded-xl grow min-w-[300px] py-6 px-8 gap-4"
-          method="POST"
           action="/api/contact"
         >
           <div class="flex flex-col gap-2 flex-auto">
@@ -69,13 +109,18 @@ export default function Contact() {
             </textarea>
           </div>
           <div class="flex flex-col gap-2">
-            <input
-              class="flex-auto rounded-xl px-2 max-w-[300px]"
-              type="submit"
+            <button
+              class={sending
+                ? "flex-auto bg-white rounded-xl px-2 py-1 max-w-[300px] animate-pulse"
+                : "flex-auto bg-white rounded-xl px-2 py-1 max-w-[300px]"}
               id="submit-contact"
+              type="button"
               name="submit"
-              disabled={true}
-            />
+              onClick={sendEmail}
+              disabled={sending}
+            >
+              {sending ? "Submitting" : "Submit"}
+            </button>
           </div>
         </form>
         <div class="flex flex-col justify-center px-8 py-4">
@@ -83,11 +128,14 @@ export default function Contact() {
             Contact Me.
           </h2>
           <p class="text-right font-medium text-black font-noto leading-[1.35rem]">
-            Feel free to reach out about anything whatsoever! Want to chat? Need
-            help on a project? Have a job offer? Whatever the reason, I'm always
-            happy to chat. This contact element is currently disabled while I
-            flesh out the backend a bit. Shoot me an email at admin@jakeabed.dev
-            for now.
+            Feel free to reach out about anything whatsoever!
+          </p>
+          <p class="text-right font-medium text-black font-noto leading-[1.35rem]">
+            Want to chat? Need help on a project? Have a job offer? Whatever the
+            reason, I'm always happy to chat.
+          </p>
+          <p class="text-right font-medium text-black font-noto leading-[1.35rem]">
+            {resp}
           </p>
         </div>
       </div>

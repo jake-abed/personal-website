@@ -8,40 +8,36 @@ interface ContactData {
   message: string | null;
 }
 
-Deno.env.set(
-  "SENDGRID_API_KEY",
-  "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",
-);
-
 const key = Deno.env.get("SENDGRID_API_KEY");
 
 export const handler: Handlers = {
   async POST(req: Request) {
-    const form = await req.formData();
-    if (!form) return new Response("No form data provided.", { status: 403 });
     const emailData: ContactData = {
-      firstName: String(form.get("firstName")),
-      lastName: String(form.get("lastName")),
-      email: String(form.get("email")),
-      message: String(form.get("message")),
+      firstName: String(req.headers.get("firstName")),
+      lastName: String(req.headers.get("lastName")),
+      email: String(req.headers.get("email")),
+      message: String(req.headers.get("message")),
     };
 
     try {
       const email = await sendContactEmail(emailData);
 
-      console.log(email);
+      if ("code" in email) {
+        return new Response("Unknown error occured.", { status: 500 });
+      }
 
-      if (email.statusCode) {
+      if ("statusCode" in email[0]) {
         return new Response(null, { status: 204 });
       } else {
         const errorMessage = String(email.message);
         return new Response(
           errorMessage +
             " - if this error persists, please contact admin@jakeabed.dev.",
-          { status: 403 },
+          { status: 202 },
         );
       }
     } catch (e) {
+      console.log(e);
       return new Response(e, { status: 500 });
     }
   },

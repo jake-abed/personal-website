@@ -7,9 +7,7 @@ const webDevAdjectives = [
   "Unique",
   "Forward Thinking",
   "Resourceful",
-  "Fun",
   "Different",
-  "Passionate",
   "Conscious",
 ];
 
