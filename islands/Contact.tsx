@@ -2,7 +2,14 @@ import { useState } from "https://esm.sh/preact@10.18.1/hooks";
 
 export default function Contact() {
   const [sending, setSending] = useState(false);
+  const [formValid, setValidity] = useState(false);
   const [resp, setResp] = useState("");
+
+  function validateContactForm() {
+    const form = document.getElementById("contactme") as HTMLFormElement;
+    setValidity(form.checkValidity());
+    return (form.checkValidity());
+  }
 
   async function sendEmail() {
     setSending(true);
@@ -61,10 +68,11 @@ export default function Contact() {
               First Name:
             </label>
             <input
-              class="flex-auto rounded-lg px-2 max-w-[300px]"
+              class="flex-auto rounded-lg px-2 max-w-[300px] shadow-brutal valid:shadow-brutal-light-green"
               type="text"
               id="first-name"
               name="firstName"
+              required={true}
             />
           </div>
           <div class="flex flex-col gap-2">
@@ -76,10 +84,11 @@ export default function Contact() {
               Last Name:
             </label>
             <input
-              class="flex-auto rounded-lg px-2 max-w-[300px]"
+              class="flex-auto rounded-lg px-2 max-w-[300px] shadow-brutal valid:shadow-brutal-light-green"
               type="text"
               id="last-name"
               name="lastName"
+              required={true}
             />
           </div>
           <div class="flex flex-col gap-2">
@@ -91,10 +100,11 @@ export default function Contact() {
               Email:
             </label>
             <input
-              class="flex-auto rounded-lg px-2 max-w-[300px]"
+              class="flex-auto rounded-lg px-2 max-w-[300px] shadow-brutal valid:shadow-brutal-light-green"
               type="email"
               id="email"
               name="email"
+              required={true}
             />
           </div>
           <div class="flex flex-col gap-2">
@@ -105,25 +115,34 @@ export default function Contact() {
             >
               Message:
             </label>
-            <textarea class="flex-auto rounded-lg" id="message" name="message">
+            <textarea
+              class="flex-auto rounded-lg shadow-brutal border-black valid:shadow-brutal-light-green"
+              id="message"
+              name="message"
+              minLength={5}
+              required={true}
+            >
             </textarea>
           </div>
           <div class="flex flex-col gap-2">
             <button
-              class={sending
-                ? "flex-auto bg-white rounded-xl px-2 py-1 max-w-[300px] animate-pulse"
-                : "flex-auto bg-white rounded-xl px-2 py-1 max-w-[300px]"}
+              class={"flex-auto bg-white rounded-xl px-2 py-1 max-w-[300px]" +
+                (sending ? " animate-pulse" : "") +
+                (formValid ? " shadow-brutal-light-green" : " shadow-brutal")}
               id="submit-contact"
               type="button"
               name="submit"
-              onClick={sendEmail}
+              onClick={() => {
+                if (!validateContactForm()) return;
+                return sendEmail();
+              }}
               disabled={sending}
             >
               {sending ? "Submitting" : "Submit"}
             </button>
           </div>
         </form>
-        <div class="flex flex-col justify-center px-8 py-4">
+        <div class="flex flex-col justify-center max-w-lg px-8 py-4">
           <h2 class="font-extrabold text-2xl text-right text-black font-noto leading-[1.6rem] pb-4">
             Contact Me.
           </h2>
@@ -134,8 +153,13 @@ export default function Contact() {
             Want to chat? Need help on a project? Have a job offer? Whatever the
             reason, I'm always happy to chat.
           </p>
+          <br></br>
           <p class="text-right font-medium text-black font-noto leading-[1.35rem]">
-            {resp}
+            {resp
+              ? resp
+              : sending
+              ? "You're trying to send me a message!"
+              : "You haven't sent a message yet!"}
           </p>
         </div>
       </div>
