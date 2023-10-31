@@ -37,7 +37,11 @@ export default function Intro() {
           to get in touch!
         </p>
       </div>
-      <img class="rounded-full h-48 w-48" src="/jake-pfp.jpeg" alt="" />
+      <img
+        class="rounded-full h-48 w-48 shadow-brutal-circle"
+        src="/jake-pfp.jpeg"
+        alt=""
+      />
     </div>
   );
 }

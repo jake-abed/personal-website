@@ -52,7 +52,7 @@ export default function Contact() {
   }
 
   return (
-    <div class="w-screen bg-light-green flex flex-col items-center justify-center px-4 py-8">
+    <div class="w-screen bg-light-green flex flex-col items-center justify-center px-4 py-16">
       <div class="flex flex-col items-center justify-center w-[90dvw] md:flex-row md:w-[60dvw] gap-8">
         <form
           id="contactme"
@@ -68,7 +68,7 @@ export default function Contact() {
               First Name:
             </label>
             <input
-              class="flex-auto rounded-lg px-2 max-w-[300px] shadow-brutal valid:shadow-brutal-light-green"
+              class="flex-auto rounded-lg px-2 max-w-[300px] shadow-brutal valid:shadow-brutal-light-green focus-visible:outline-none"
               type="text"
               id="first-name"
               name="firstName"
@@ -84,7 +84,7 @@ export default function Contact() {
               Last Name:
             </label>
             <input
-              class="flex-auto rounded-lg px-2 max-w-[300px] shadow-brutal valid:shadow-brutal-light-green"
+              class="flex-auto rounded-lg px-2 max-w-[300px] shadow-brutal valid:shadow-brutal-light-green focus-visible:outline-none"
               type="text"
               id="last-name"
               name="lastName"
@@ -100,7 +100,7 @@ export default function Contact() {
               Email:
             </label>
             <input
-              class="flex-auto rounded-lg px-2 max-w-[300px] shadow-brutal valid:shadow-brutal-light-green"
+              class="flex-auto rounded-lg px-2 max-w-[300px] shadow-brutal valid:shadow-brutal-light-green focus-visible:outline-none"
               type="email"
               id="email"
               name="email"
@@ -116,7 +116,7 @@ export default function Contact() {
               Message:
             </label>
             <textarea
-              class="flex-auto rounded-lg shadow-brutal border-black valid:shadow-brutal-light-green"
+              class="flex-auto py-1 px-2 rounded-lg shadow-brutal border-black valid:shadow-brutal-light-green focus-visible:outline-none"
               id="message"
               name="message"
               minLength={5}
@@ -126,7 +126,7 @@ export default function Contact() {
           </div>
           <div class="flex flex-col gap-2">
             <button
-              class={"flex-auto bg-white rounded-xl px-2 py-1 max-w-[300px]" +
+              class={"flex-auto font-noto font-bold bg-white rounded-xl px-2 py-1 max-w-[300px] focus-visible:outline-none" +
                 (sending ? " animate-pulse" : "") +
                 (formValid ? " shadow-brutal-light-green" : " shadow-brutal")}
               id="submit-contact"

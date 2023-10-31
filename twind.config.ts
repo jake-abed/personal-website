@@ -16,6 +16,7 @@ export default {
       },
       boxShadow: {
         "brutal": "3px 3px 0px 3px #050517",
+        "brutal-circle": "5px 5px 0px 2px #050517",
         "brutal-red": "2px 2px 0px 2px #FF4242",
         "brutal-light-green": "2px 2px 0px 2px #96E072",
       },
