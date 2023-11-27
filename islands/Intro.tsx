@@ -40,7 +40,7 @@ export default function Intro() {
       <img
         class="rounded-full h-48 w-48 shadow-brutal-circle"
         src="/jake-pfp.jpeg"
-        alt=""
+        alt="A portrait of Jake Abed in a Dan Flash's inspired sweater."
       />
     </div>
   );

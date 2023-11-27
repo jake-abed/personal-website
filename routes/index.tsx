@@ -31,6 +31,11 @@ export default function Home(props: PageProps<HomeProps>) {
     <>
       <Head>
         <title>Jake Abed's Portfolio</title>
+        <meta
+          name="description"
+          content="Jake Abed's personal portfolio with his projects, information, and a quick way to contact him."
+        >
+        </meta>
       </Head>
       <body class="w-screen min-h-screen flex flex-col bg-slate-900 overflow-x-hidden">
         <Nav sections={navSections} />

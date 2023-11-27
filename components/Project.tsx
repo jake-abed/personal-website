@@ -10,6 +10,7 @@ export function Project(props: ProjectProps) {
         <img
           class="rounded-lg shadow-brutal-red"
           src={props.imagePath}
+          alt={`A screenshot of ${props.name} in action.`}
         >
         </img>
       </a>
@@ -19,7 +20,14 @@ export function Project(props: ProjectProps) {
       <p class="font-noto">{props.desc}</p>
       <div class="flex mt-auto flex-cols gap-4 justify-center">
         {props.icons?.map((icon) => (
-          <img class="" width="32" height="32" src={icon}></img>
+          <img
+            class=""
+            width="32"
+            height="32"
+            src={icon}
+            alt="An icon of a technology used to make this project."
+          >
+          </img>
         ))}
       </div>
     </div>
