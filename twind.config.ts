@@ -11,7 +11,7 @@ export default {
       colors: {
         "light-green": "#96E072",
         "black": "#050517",
-        "red": "#FF4242",
+        "red": "#DE2A2A",
         "white": "#FFFBFF",
       },
       boxShadow: {

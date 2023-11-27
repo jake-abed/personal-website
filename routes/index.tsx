@@ -42,7 +42,7 @@ export default function Home(props: PageProps<HomeProps>) {
         <Intro></Intro>
         <div
           id="projects"
-          class="flex justify-center mx-auto py-16 w-11/12 gap-6 flex-wrap"
+          class="bg-white flex justify-center py-16 gap-6 flex-wrap"
         >
           {projects.map((project) => {
             return (
