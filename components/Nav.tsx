@@ -18,14 +18,14 @@ export function Nav(props: NavElement) {
       </a>
       <ul class="nav-options transition-height duration-300 flex  flex-wrap gap-8 lg:flex flex-row lg:items-center">
         {props.sections.map((section) => (
-          <a href={"#" + section.replace(" ", "").toLowerCase()}>
-            <li
-              style="filter: drop-shadow(0px 0px 2px black);"
-              class="font-bold text-white font-noto"
-            >
+          <li
+            style="filter: drop-shadow(0px 0px 2px black);"
+            class="font-bold text-white font-noto"
+          >
+            <a href={"#" + section.replace(" ", "").toLowerCase()}>
               {section}
-            </li>
-          </a>
+            </a>
+          </li>
         ))}
       </ul>
     </nav>
