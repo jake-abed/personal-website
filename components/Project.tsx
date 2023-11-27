@@ -21,7 +21,8 @@ export function Project(props: ProjectProps) {
       <div class="flex mt-auto flex-cols gap-4 justify-center">
         {props.icons?.map((icon) => (
           <img
-            class=""
+            className="flex-none"
+            style="height: 32px; width: 32px;"
             width="32"
             height="32"
             src={icon}
