@@ -45,62 +45,62 @@ export default function Contact() {
   }
 
   return (
-    <div class="w-screen bg-light-green flex flex-col items-center justify-center px-4 py-8">
-      <div class="flex flex-col items-center justify-center w-[90dvw] md:flex-row md:w-[60dvw] gap-8">
+    <div className="w-screen bg-light-green flex flex-col items-center justify-center px-4 py-8">
+      <div className="flex flex-col items-center justify-center w-[90dvw] md:flex-row md:w-[60dvw] gap-8">
         <form
           id="contactme"
-          class="flex flex-col shrink-0 bg-red shadow-brutal rounded-xl grow min-w-[300px] py-6 px-8 gap-4"
+          className="flex flex-col shrink-0 bg-red shadow-brutal rounded-xl grow min-w-[300px] py-6 px-8 gap-4"
           action="/api/contact"
         >
-          <div class="flex flex-col gap-2 flex-auto">
+          <div className="flex flex-col gap-2 flex-auto">
             <label
-              class="font-noto font-bold text-white"
+              className="font-noto font-bold text-white"
               for="first-name"
               style="filter: drop-shadow(0px 0px 2px black);"
             >
               First Name:
             </label>
             <input
-              class="flex-auto rounded-lg px-2 max-w-[300px]"
+              className="flex-auto rounded-lg px-2 max-w-[300px]"
               type="text"
               id="first-name"
               name="firstName"
             />
           </div>
-          <div class="flex flex-col gap-2">
+          <div className="flex flex-col gap-2">
             <label
               for="last-name"
-              class="font-noto font-bold text-white"
+              className="font-noto font-bold text-white"
               style="filter: drop-shadow(0px 0px 2px black);"
             >
               Last Name:
             </label>
             <input
-              class="flex-auto rounded-lg px-2 max-w-[300px]"
+              className="flex-auto rounded-lg px-2 max-w-[300px]"
               type="text"
               id="last-name"
               name="lastName"
             />
           </div>
-          <div class="flex flex-col gap-2">
+          <div className="flex flex-col gap-2">
             <label
               for="email"
-              class="font-noto font-bold text-white"
+              className="font-noto font-bold text-white"
               style="filter: drop-shadow(0px 0px 2px black);"
             >
               Email:
             </label>
             <input
-              class="flex-auto rounded-lg px-2 max-w-[300px]"
+              className="flex-auto rounded-lg px-2 max-w-[300px]"
               type="email"
               id="email"
               name="email"
             />
           </div>
-          <div class="flex flex-col gap-2">
+          <div className="flex flex-col gap-2">
             <label
               for="message"
-              class="font-noto font-bold text-white"
+              className="font-noto font-bold text-white"
               style="filter: drop-shadow(0px 0px 2px black);"
             >
               Message:
@@ -108,9 +108,9 @@ export default function Contact() {
             <textarea class="flex-auto rounded-lg" id="message" name="message">
             </textarea>
           </div>
-          <div class="flex flex-col gap-2">
+          <div className="flex flex-col gap-2">
             <button
-              class={sending
+              className={sending
                 ? "flex-auto bg-white rounded-xl px-2 py-1 max-w-[300px] animate-pulse"
                 : "flex-auto bg-white rounded-xl px-2 py-1 max-w-[300px]"}
               id="submit-contact"
@@ -123,18 +123,18 @@ export default function Contact() {
             </button>
           </div>
         </form>
-        <div class="flex flex-col justify-center px-8 py-4">
-          <h2 class="font-extrabold text-2xl text-right text-black font-noto leading-[1.6rem] pb-4">
+        <div className="flex flex-col justify-center px-8 py-4">
+          <h2 className="font-extrabold text-2xl text-right text-black font-noto leading-[1.6rem] pb-4">
             Contact Me.
           </h2>
-          <p class="text-right font-medium text-black font-noto leading-[1.35rem]">
+          <p className="text-right font-medium text-black font-noto leading-[1.35rem]">
             Feel free to reach out about anything whatsoever!
           </p>
-          <p class="text-right font-medium text-black font-noto leading-[1.35rem]">
+          <p className="text-right font-medium text-black font-noto leading-[1.35rem]">
             Want to chat? Need help on a project? Have a job offer? Whatever the
             reason, I'm always happy to chat.
           </p>
-          <p class="text-right font-medium text-black font-noto leading-[1.35rem]">
+          <p className="text-right font-medium text-black font-noto leading-[1.35rem]">
             {resp}
           </p>
         </div>

@@ -4,7 +4,6 @@ import { getCount } from "../utils/db.ts";
 import { Nav } from "../components/Nav.tsx";
 import { Project } from "../components/Project.tsx";
 import Contact from "../islands/Contact.tsx";
-import { ProjectProps } from "../utils/interfaces.ts";
 import { projects } from "../static/projects.ts";
 import Intro from "../islands/Intro.tsx";
 
@@ -32,17 +31,17 @@ export default function Home(props: PageProps<HomeProps>) {
       <Head>
         <title>Jake Abed's Portfolio</title>
       </Head>
-      <body class="w-screen min-h-screen flex flex-col bg-slate-900 overflow-x-hidden">
+      <body className="w-screen min-h-screen flex flex-col bg-slate-900 overflow-x-hidden">
         <Nav sections={navSections} />
         <Intro></Intro>
         <div
           id="projects"
-          class="flex justify-center mx-auto py-8 w-11/12 gap-6 flex-wrap"
+          className="flex justify-center mx-auto py-8 w-11/12 gap-6 flex-wrap"
         >
           {projects.map((project) => {
             return (
               <Project
-                class="p-4 flex flex-col items-center bg-light-green flex-wrap"
+                className="p-4 flex flex-col items-center bg-light-green flex-wrap"
                 {...project}
               >
               </Project>
@@ -50,7 +49,7 @@ export default function Home(props: PageProps<HomeProps>) {
           })}
         </div>
         <Contact></Contact>
-        <div class="static bottom-0 w-full p-4 mt-auto bg-red flex justify-center">
+        <div className="static bottom-0 w-full p-4 mt-auto bg-red flex justify-center">
           <a href="https://fresh.deno.dev">
             <img
               width="197"
