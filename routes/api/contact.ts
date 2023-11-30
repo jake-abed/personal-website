@@ -19,6 +19,15 @@ export const handler: Handlers = {
       message: String(req.headers.get("message")),
     };
 
+    console.log(
+      `Name: ${emailData.firstName} ${emailData.lastName}, Email: ${emailData.email}.`,
+    );
+    console.log(req.referrer);
+
+    if (emailData.email === "null" || emailData.email === null) {
+      return new Response("Incorrect data.", { status: 400 });
+    }
+
     try {
       const email = await sendContactEmail(emailData);
 

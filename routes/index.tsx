@@ -30,13 +30,18 @@ export default function Home(props: PageProps<HomeProps>) {
     <>
       <Head>
         <title>Jake Abed's Portfolio</title>
+        <meta
+          name="description"
+          content="Jake Abed's personal portfolio with his projects, information, and a quick way to contact him."
+        >
+        </meta>
       </Head>
       <body className="w-screen min-h-screen flex flex-col bg-slate-900 overflow-x-hidden">
         <Nav sections={navSections} />
         <Intro></Intro>
         <div
           id="projects"
-          className="flex justify-center mx-auto py-8 w-11/12 gap-6 flex-wrap"
+          className="bg-white flex justify-center py-16 gap-6 flex-wrap"
         >
           {projects.map((project) => {
             return (

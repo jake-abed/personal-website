@@ -2,7 +2,14 @@ import { useState } from "https://esm.sh/preact@10.18.1/hooks";
 
 export default function Contact() {
   const [sending, setSending] = useState(false);
+  const [formValid, setValidity] = useState(false);
   const [resp, setResp] = useState("");
+
+  function validateContactForm() {
+    const form = document.getElementById("contactme") as HTMLFormElement;
+    setValidity(form.checkValidity());
+    return (form.checkValidity());
+  }
 
   async function sendEmail() {
     setSending(true);
@@ -45,7 +52,7 @@ export default function Contact() {
   }
 
   return (
-    <div className="w-screen bg-light-green flex flex-col items-center justify-center px-4 py-8">
+    <div className="w-screen bg-light-green flex flex-col items-center justify-center px-4 py-16">
       <div className="flex flex-col items-center justify-center w-[90dvw] md:flex-row md:w-[60dvw] gap-8">
         <form
           id="contactme"
@@ -61,10 +68,11 @@ export default function Contact() {
               First Name:
             </label>
             <input
-              className="flex-auto rounded-lg px-2 max-w-[300px]"
+              class="flex-auto rounded-lg px-2 max-w-[300px]"
               type="text"
               id="first-name"
               name="firstName"
+              required={true}
             />
           </div>
           <div className="flex flex-col gap-2">
@@ -76,10 +84,11 @@ export default function Contact() {
               Last Name:
             </label>
             <input
-              className="flex-auto rounded-lg px-2 max-w-[300px]"
+              class="flex-auto rounded-lg px-2 max-w-[300px]"
               type="text"
               id="last-name"
               name="lastName"
+              required={true}
             />
           </div>
           <div className="flex flex-col gap-2">
@@ -91,10 +100,11 @@ export default function Contact() {
               Email:
             </label>
             <input
-              className="flex-auto rounded-lg px-2 max-w-[300px]"
+              class="flex-auto rounded-lg px-2 max-w-[300px]"
               type="email"
               id="email"
               name="email"
+              required={true}
             />
           </div>
           <div className="flex flex-col gap-2">
@@ -105,26 +115,35 @@ export default function Contact() {
             >
               Message:
             </label>
-            <textarea class="flex-auto rounded-lg" id="message" name="message">
+            <textarea
+              class="flex-auto py-1 px-2 rounded-lg shadow-brutal border-black valid:shadow-brutal-light-green focus-visible:outline-none"
+              id="message"
+              name="message"
+              minLength={5}
+              required={true}
+            >
             </textarea>
           </div>
           <div className="flex flex-col gap-2">
             <button
-              className={sending
+              class={sending
                 ? "flex-auto bg-white rounded-xl px-2 py-1 max-w-[300px] animate-pulse"
                 : "flex-auto bg-white rounded-xl px-2 py-1 max-w-[300px]"}
               id="submit-contact"
               type="button"
               name="submit"
-              onClick={sendEmail}
+              onClick={() => {
+                if (!validateContactForm()) return;
+                return sendEmail();
+              }}
               disabled={sending}
             >
               {sending ? "Submitting" : "Submit"}
             </button>
           </div>
         </form>
-        <div className="flex flex-col justify-center px-8 py-4">
-          <h2 className="font-extrabold text-2xl text-right text-black font-noto leading-[1.6rem] pb-4">
+        <div class="flex flex-col justify-center px-8 py-4">
+          <h2 class="font-extrabold text-2xl text-right text-black font-noto leading-[1.6rem] pb-4">
             Contact Me.
           </h2>
           <p className="text-right font-medium text-black font-noto leading-[1.35rem]">
@@ -134,7 +153,7 @@ export default function Contact() {
             Want to chat? Need help on a project? Have a job offer? Whatever the
             reason, I'm always happy to chat.
           </p>
-          <p className="text-right font-medium text-black font-noto leading-[1.35rem]">
+          <p class="text-right font-medium text-black font-noto leading-[1.35rem]">
             {resp}
           </p>
         </div>

@@ -4,7 +4,7 @@ const projects: Array<ProjectProps> = [
   {
     name: "AOS Inventory Sync",
     url: "#",
-    imagePath: "/inventory-sync.png",
+    imagePath: "/inventory-sync.webp",
     desc:
       "A production web app to sync inventory between two disparate platforms. Features a REST API, lightweight Deno KV database, and a hyper-restrictive, hand-rolled auth system.",
     icons: [
@@ -16,7 +16,7 @@ const projects: Array<ProjectProps> = [
   {
     name: "Rock Paper Scissors Game",
     url: "https://jake-abed.github.io/rock-paper-scissors/",
-    imagePath: "/rps-screenshot.png",
+    imagePath: "/rps-screenshot.webp",
     desc:
       "A simple, quick game of RPS. You play against the computer with first-to-five rules. All art and designs are original; the rock looks a little funny, but I love it!",
     icons: [
@@ -28,7 +28,7 @@ const projects: Array<ProjectProps> = [
   {
     name: "Book Library",
     url: "https://jake-abed.github.io/book-library/",
-    imagePath: "/basilisk-library.png",
+    imagePath: "/basilisk-library.webp",
     desc:
       "A small library app to store read books and more. While simple, it demonstrates an understanding of composition through factories and separation of business logic from DOM manipulation.",
     icons: [
@@ -40,7 +40,7 @@ const projects: Array<ProjectProps> = [
   {
     name: "To-Do List",
     url: "https://jake-abed.github.io/to-do-list",
-    imagePath: "/to-do.png",
+    imagePath: "/to-do.webp",
     desc:
       "An extremely simple, to-do list web app. The site is rather plain, the code demonstrates SOLID design principles and thoughtful architecture.",
     icons: [
