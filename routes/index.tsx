@@ -1,11 +1,13 @@
 import type { Handlers, PageProps } from "$fresh/server.ts";
 import { Head } from "$fresh/runtime.ts";
 import { getCount } from "../utils/db.ts";
-import { Nav } from "../components/Nav.tsx";
+import Header from "../components/Header.tsx";
 import { Project } from "../components/Project.tsx";
+import { Technologies } from "../islands/Technologies.tsx";
 import Contact from "../islands/Contact.tsx";
 import { projects } from "../static/projects.ts";
 import Intro from "../islands/Intro.tsx";
+import { technologies } from "../static/technologies.js";
 
 interface HomeProps {
   start: number;
@@ -19,12 +21,6 @@ export const handler: Handlers<HomeProps> = {
   },
 };
 
-const navSections = [
-  "Projects",
-  "Contact Me",
-  "About",
-];
-
 export default function Home(props: PageProps<HomeProps>) {
   return (
     <>
@@ -37,8 +33,9 @@ export default function Home(props: PageProps<HomeProps>) {
         </meta>
       </Head>
       <body className="w-screen min-h-screen flex flex-col bg-slate-900 overflow-x-hidden">
-        <Nav sections={navSections} />
+        <Header />
         <Intro></Intro>
+        <Technologies technologies={technologies} />
         <div
           id="projects"
           className="bg-white flex justify-center py-16 gap-6 flex-wrap"

@@ -56,7 +56,7 @@ export default function Contact() {
       <div className="max-w-2xl flex flex-col justify-center w-[90dvw] md:flex-row md:w-[60dvw] gap-8">
         <form
           id="contactme"
-          className="flex flex-col max-w-xs shrink-0 bg-red shadow-brutal rounded-xl grow min-w-[300px] py-6 px-8 gap-4"
+          className="flex flex-col self-center max-w-xs shrink-0 bg-red shadow-brutal rounded-xl grow min-w-[300px] py-6 px-8 gap-4"
           action="/api/contact"
         >
           <div className="flex flex-col gap-2 flex-auto">
@@ -68,7 +68,7 @@ export default function Contact() {
               First Name:
             </label>
             <input
-              class="flex-auto rounded-lg px-2 max-w-[300px]"
+              className="flex-auto font-noto rounded-lg px-2 max-w-[300px] shadow-brutal valid:shadow-brutal-light-green focus-visible:outline-none"
               type="text"
               id="first-name"
               name="firstName"
@@ -84,7 +84,7 @@ export default function Contact() {
               Last Name:
             </label>
             <input
-              class="flex-auto rounded-lg px-2 max-w-[300px]"
+              class="font-noto flex-auto rounded-lg px-2 max-w-[300px] shadow-brutal valid:shadow-brutal-light-green focus-visible:outline-none"
               type="text"
               id="last-name"
               name="lastName"
@@ -100,7 +100,7 @@ export default function Contact() {
               Email:
             </label>
             <input
-              class="flex-auto rounded-lg px-2 max-w-[300px]"
+              class="flex-auto font-noto rounded-lg px-2 max-w-[300px] shadow-brutal valid:shadow-brutal-light-green focus-visible:outline-none"
               type="email"
               id="email"
               name="email"
@@ -116,7 +116,7 @@ export default function Contact() {
               Message:
             </label>
             <textarea
-              class="flex-auto py-1 px-2 rounded-lg shadow-brutal border-black valid:shadow-brutal-light-green focus-visible:outline-none"
+              class="flex-auto font-noto py-1 px-2 rounded-lg shadow-brutal border-black valid:shadow-brutal-light-green focus-visible:outline-none"
               id="message"
               name="message"
               minLength={5}
@@ -126,9 +126,9 @@ export default function Contact() {
           </div>
           <div className="flex flex-col gap-2">
             <button
-              class={sending
-                ? "flex-auto bg-white rounded-xl px-2 py-1 max-w-[300px] animate-pulse"
-                : "flex-auto bg-white rounded-xl px-2 py-1 max-w-[300px]"}
+              className={sending
+                ? "flex-auto bg-white rounded-xl shadow-brutal font-noto font-semibold px-2 py-1 max-w-[300px] animate-pulse"
+                : "flex-auto bg-white rounded-xl shadow-brutal font-noto font-semibold px-2 py-1 max-w-[300px]"}
               id="submit-contact"
               type="button"
               name="submit"
@@ -138,22 +138,24 @@ export default function Contact() {
               }}
               disabled={sending}
             >
-              {sending ? "Submitting" : "Submit"}
+              {sending ? "SUBMITTING" : "SUBMIT"}
             </button>
           </div>
         </form>
-        <div class="flex bg-light-green flex-col justify-center rounded-lg shadow-brutal h-max px-8 py-4">
-          <h2 class="font-extrabold text-2xl text-right text-black font-noto leading-[1.6rem] pb-4">
+        <div className="flex bg-light-green flex-col justify-center rounded-lg shadow-brutal h-max px-8 py-4">
+          <h2 className="font-extrabold text-2xl text-right text-black font-noto leading-[1.6rem] pb-4">
             Contact Me.
           </h2>
           <p className="text-right font-medium text-black font-noto leading-[1.35rem]">
             Feel free to reach out about anything whatsoever!
           </p>
+          <br />
           <p className="text-right font-medium text-black font-noto leading-[1.35rem]">
             Want to chat? Need help on a project? Have a job offer? Whatever the
             reason, I'm always happy to chat.
           </p>
-          <p class="text-right font-medium text-black font-noto leading-[1.35rem]">
+          <br />
+          <p className="text-right font-medium text-black font-noto leading-[1.35rem]">
             {resp}
           </p>
         </div>
