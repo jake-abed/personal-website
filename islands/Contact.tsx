@@ -52,11 +52,11 @@ export default function Contact() {
   }
 
   return (
-    <div className="w-screen bg-light-green flex flex-col items-center justify-center px-4 py-16">
-      <div className="flex flex-col items-center justify-center w-[90dvw] md:flex-row md:w-[60dvw] gap-8">
+    <div className="w-screen bg-white flex flex-col items-center justify-center px-4 py-16">
+      <div className="max-w-2xl flex flex-col justify-center w-[90dvw] md:flex-row md:w-[60dvw] gap-8">
         <form
           id="contactme"
-          className="flex flex-col shrink-0 bg-red shadow-brutal rounded-xl grow min-w-[300px] py-6 px-8 gap-4"
+          className="flex flex-col max-w-xs shrink-0 bg-red shadow-brutal rounded-xl grow min-w-[300px] py-6 px-8 gap-4"
           action="/api/contact"
         >
           <div className="flex flex-col gap-2 flex-auto">
@@ -142,7 +142,7 @@ export default function Contact() {
             </button>
           </div>
         </form>
-        <div class="flex flex-col justify-center px-8 py-4">
+        <div class="flex bg-light-green flex-col justify-center rounded-lg shadow-brutal h-max px-8 py-4">
           <h2 class="font-extrabold text-2xl text-right text-black font-noto leading-[1.6rem] pb-4">
             Contact Me.
           </h2>

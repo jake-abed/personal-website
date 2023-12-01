@@ -12,7 +12,7 @@ export default {
         "light-green": "#96E072",
         "black": "#050517",
         "red": "#DE2A2A",
-        "white": "#FFFBFF",
+        "white": "#f0eff4",
       },
       boxShadow: {
         "brutal": "3px 3px 0px 3px #050517",
