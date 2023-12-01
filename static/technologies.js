@@ -6,7 +6,7 @@ const technologies = [
     },
     {
         name: 'Deno',
-        description: `Deno is going through growing pains, but I'm liking the direction it is headed. There is nothing wrong with admitting you were wrong. Deno's native TypeScript support, web standards baked in, and a focus on security are all things I can get behind. The mascot is also too cute for its own good.`,
+        description: `I'm liking the direction Deno is headed. Deno's native TypeScript support, web standards, and focus on security are what I crave. Also, the mascot is also too cute for its own good.`,
         logo: '/badges/deno.svg'
     },
     {
@@ -16,7 +16,7 @@ const technologies = [
     },
     {
         name: 'React',
-        description: `React deserves its popularity. Having built dynamic UIs without it, it has made front end development so much faster and easier. The fact that they have started borrowing more and more from the functional paradigm is just immutability icing on the lambda cake.`,
+        description: `Having built dynamic UIs without it, React has made front end development faster and easier. The fact they have started borrowing more from the functional paradigm is just immutability icing on the cake.`,
         logo: '/badges/react.svg'
     }
 ]
