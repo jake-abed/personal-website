@@ -3,7 +3,8 @@ import { ProjectProps } from "../utils/interfaces.ts";
 export function Project(props: ProjectProps) {
   return (
     <div
-      className={"max-w-xs rounded-lg gap-2 shadow-brutal " + props.className}
+      className={"max-w-xs rounded-lg gap-2 shadow-brutal relative " +
+        props.className}
       id={props.id ? props.id : ""}
     >
       <a target="_blank" href={props.url}>
@@ -30,6 +31,25 @@ export function Project(props: ProjectProps) {
           >
           </img>
         ))}
+        {props.repoUrl
+          ? (
+            <>
+              <a
+                className="bg-black px-[7px] pt-[8px] pb-[6px] rounded-full absolute bottom-3 right-3"
+                href={props.repoUrl}
+              >
+                <img
+                  src="/badges/github-green.svg"
+                  width="28"
+                  height="28"
+                  alt="The GitHub logo!"
+                />
+              </a>
+            </>
+          )
+          : null}
+      </div>
+      <div className="flex justify-between">
       </div>
     </div>
   );
