@@ -8,6 +8,7 @@ import Contact from "../islands/Contact.tsx";
 import { projects } from "../static/projects.ts";
 import Intro from "../islands/Intro.tsx";
 import { technologies } from "../static/technologies.js";
+import AboutMe from "../components/AboutMe.tsx";
 
 interface HomeProps {
   start: number;
@@ -51,6 +52,7 @@ export default function Home(props: PageProps<HomeProps>) {
           })}
         </div>
         <Contact></Contact>
+        <AboutMe />
         <div className="static bottom-0 w-full p-4 mt-auto bg-red flex justify-center">
           <a href="https://fresh.deno.dev">
             <img

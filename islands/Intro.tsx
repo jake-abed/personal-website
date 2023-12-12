@@ -1,4 +1,4 @@
-import { useEffect, useState } from "https://esm.sh/preact@10.18.1/hooks";
+import { useEffect, useState } from "https://esm.sh/preact@10.19.2/hooks";
 import { chooseRandomElement } from "../utils/helpers.ts";
 
 const webDevAdjectives = [

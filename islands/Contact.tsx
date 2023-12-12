@@ -1,4 +1,4 @@
-import { useState } from "https://esm.sh/preact@10.18.1/hooks";
+import { useState } from "https://esm.sh/preact@10.19.2/hooks";
 
 export default function Contact() {
   const [sending, setSending] = useState(false);

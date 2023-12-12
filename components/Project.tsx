@@ -9,7 +9,7 @@ export function Project(props: ProjectProps) {
     >
       <a target="_blank" href={props.url}>
         <img
-          className="rounded-lg shadow-brutal-red"
+          className="rounded-lg"
           src={props.imagePath}
           alt={`A screenshot of ${props.name} in action.`}
         >

@@ -1,4 +1,4 @@
-import { useState } from "https://esm.sh/preact@10.18.1/hooks";
+import { useState } from "https://esm.sh/preact@10.19.2/hooks";
 
 interface Technology {
   name: string;
@@ -32,7 +32,7 @@ export function Technologies({ technologies }: TechProps) {
           {technologies.map((tech) => (
             <div
               className={((activeTech === tech.name)
-                ? "shadow-brutal-red"
+                ? "shadow-brutal"
                 : "shadow-brutal max-w-[96px]") +
                 " flex flex-row bg-light-green rounded-lg p-4 items-center gap-4"}
               onClick={handleTechClick(tech.name)}
