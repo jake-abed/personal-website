@@ -23,7 +23,7 @@ export default function Intro() {
 
   return (
     <div className="p-8 mx-auto w-full bg-white flex justify-center flex-col items-center lg:flex-row">
-      <div className="max-w-3xl bg-light-green shadow-brutal rounded-lg flex flex-col items-center justify-center lg:flex-row px-16 py-24">
+      <div className="max-w-3xl bg-light-green shadow-brutal rounded-lg flex flex-col items-center justify-center lg:flex-row px-12 py-16">
         <div>
           <h2
             id="intro-h2"

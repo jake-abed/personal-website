@@ -19,7 +19,7 @@ export default function AboutMe() {
   ];
 
   return (
-    <div className="bg-white w-full flex flex-col justify-center items-center gap-8 p-16">
+    <div className="bg-white w-full flex flex-col justify-center items-center gap-8 p-16 pt-8">
       <h2 className="font-noto font-extrabold text-2xl">About Me</h2>
       <p className="font-noto">
         Aside from coding and web development, I keep myself busy with hiking,

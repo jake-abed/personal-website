@@ -53,7 +53,7 @@ export default function Contact() {
 
   return (
     <div className="w-screen bg-white flex flex-col items-center justify-center px-4 py-16">
-      <div className="max-w-2xl flex flex-col justify-center w-[90dvw] md:flex-row md:w-[60dvw] gap-8">
+      <div className="max-w-2xl flex flex-col-reverse justify-center w-[90dvw] md:flex-row-reverse md:w-[60dvw] gap-8">
         <form
           id="contactme"
           className="flex flex-col self-center max-w-xs shrink-0 bg-red shadow-brutal rounded-xl grow min-w-[300px] py-6 px-8 gap-4"

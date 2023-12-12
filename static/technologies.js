@@ -16,7 +16,7 @@ const technologies = [
     },
     {
         name: 'React',
-        description: `Having built dynamic UIs without it, React has made front end development faster and easier. The fact they have started borrowing more from the functional paradigm is just immutability icing on the cake.`,
+        description: `Having built dynamic UIs without it, React has made frontend development faster. The fact they have started borrowing more from functional programming is amazing too.`,
         logo: '/badges/react.svg'
     }
 ]
