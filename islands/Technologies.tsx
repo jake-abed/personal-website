@@ -34,7 +34,7 @@ export function Technologies({ technologies }: TechProps) {
               className={((activeTech === tech.name)
                 ? "shadow-brutal animate-expand"
                 : "shadow-brutal max-w-[96px]") +
-                " flex flex-row overflow-hidden bg-light-green rounded-lg p-4 items-center gap-4 transition-all"}
+                " flex flex-row overflow-hidden bg-light-green rounded-lg p-4 items-center gap-4 md:max-h-[220px]"}
               onClick={handleTechClick(tech.name)}
             >
               <img
@@ -45,7 +45,7 @@ export function Technologies({ technologies }: TechProps) {
               />
               {(activeTech !== "" && activeTech === tech.name)
                 ? (
-                  <div className="animate-fadeIn bg-light-green max-w-[14rem] lg:max-w-xl p-4 font-noto font-medium text-md leading-[1.35rem]">
+                  <div className="animate-fadeIn overflow-hidden bg-light-green max-w-[14rem] max-h-max lg:max-w-xl p-4 font-noto font-medium text-md leading-[1.35rem]">
                     {techList.get(activeTech)}
                   </div>
                 )

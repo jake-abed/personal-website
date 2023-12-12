@@ -6,8 +6,15 @@ export default {
     extend: {
       keyframes: {
         expand: {
-          "0%": { "max-width": "96px", "max-height": "96px" },
-          "100%": { "max-width": "100%", "max-height": "220px" },
+          "0%": {
+            "max-width": "96px",
+            "max-height": "96px",
+          },
+          "20%": {
+            "max-width": "30%",
+            "max-height": "110px",
+          },
+          "100%": { "max-width": "100%", "max-height": "230px" },
         },
         fadeIn: {
           "0%": { "opacity": "0" },
