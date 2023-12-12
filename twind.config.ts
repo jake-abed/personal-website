@@ -4,6 +4,22 @@ export default {
   selfURL: import.meta.url,
   theme: {
     extend: {
+      keyframes: {
+        expand: {
+          "0%": { "max-width": "96px", "max-height": "96px" },
+          "100%": { "max-width": "100%", "max-height": "220px" },
+        },
+        fadeIn: {
+          "0%": { "opacity": "0" },
+          "50%": { "opacity": "0.05" },
+          "75%": { "opacity": "0.1" },
+          "100%": { "opacity": "1" },
+        },
+      },
+      animation: {
+        expand: "expand 0.5s ease-in 1",
+        fadeIn: "fadeIn 0.75s ease-in 1",
+      },
       fontFamily: {
         "monoton": ["Monoton", "sans-serif"],
         "noto": ['"Noto Sans"', "sans-serif"],

@@ -12,7 +12,7 @@ const webDevAdjectives = [
 ];
 
 export default function Intro() {
-  const [adjective, setAdj] = useState("Thoughtful");
+  const [adjective, setAdj] = useState(chooseRandomElement(webDevAdjectives));
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -32,10 +32,9 @@ export default function Intro() {
             <span id="intro-adj">{adjective}</span> Web Development
           </h2>
           <p className="max-w-lg font-medium text-md leading-[1.35rem]">
-            Thank you for stopping by. While I consider this site very much
-            'Under Construction', I firmly believe that it successfully
-            demonstrates my abilities and can show you a little about me as
-            well. Don't be afraid to get in touch!
+            Hey, there! I'm a full stack web developer with a passion for
+            learning and trying new things. Feel free to reach out via the form
+            below or connect on one of the platforms below.
           </p>
           <div className="p-8 flex flex-row gap-8 justify-center items-center lg:justify-start">
             <a href="https://github.com/jake-abed">
