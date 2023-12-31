@@ -37,22 +37,24 @@ export default function Home(props: PageProps<HomeProps>) {
         <Header />
         <Intro></Intro>
         <Technologies technologies={technologies} />
-        <h2 className="font-noto bg-white text-center pt-8 pb-4 lg:pb-0 text-2xl leading-[1.6rem] font-extrabold">
+        <h2 className="font-noto bg-white text-center pt-8 pb-4 text-3xl leading-[1.6rem] font-extrabold">
           I Made These Things!
         </h2>
         <div
           id="projects"
-          className="bg-white flex justify-center py-16 gap-6 flex-wrap"
+          className="bg-white flex justify-center py-16 lg:py-12 gap-6 flex-wrap"
         >
-          {projects.map((project) => {
-            return (
-              <Project
-                className="p-4 flex flex-col items-center bg-light-green flex-wrap"
-                {...project}
-              >
-              </Project>
-            );
-          })}
+          <div className="lg:w-8/12 flex justify-center gap-6 flex-wrap">
+            {projects.map((project) => {
+              return (
+                <Project
+                  className="p-4 flex flex-col items-center bg-light-green flex-wrap"
+                  {...project}
+                >
+                </Project>
+              );
+            })}
+          </div>
         </div>
         <Contact></Contact>
         <AboutMe />
