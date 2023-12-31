@@ -12,7 +12,6 @@ interface TechProps {
 
 export function Technologies({ technologies }: TechProps) {
   const [activeTech, setActiveTech] = useState("Elixir");
-  const [prevTech, setPrevTech]: [string, StateUpdater<string>] = useState("");
 
   const techList = new Map(
     technologies.map((tech) => [tech.name, tech.description]),
@@ -20,7 +19,6 @@ export function Technologies({ technologies }: TechProps) {
 
   const handleTechClick = (tech: string) => () => {
     setActiveTech(tech);
-    setPrevTech(activeTech);
     return;
   };
 
@@ -37,7 +35,7 @@ export function Technologies({ technologies }: TechProps) {
               className={(activeTech === tech.name
                 ? "w-full md:w-1/2 max-h-[400px]"
                 : "w-[156px] max-h-[156px]") +
-                " transition-all duration-700 self-center p-8 bg-light-green rounded-lg"}
+                " transition-all shadow-brutal duration-1000 self-center p-8 bg-light-green rounded-lg"}
             >
               <img
                 className="mx-auto"
