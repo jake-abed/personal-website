@@ -6,26 +6,17 @@ export default {
     extend: {
       keyframes: {
         expand: {
-          "0%": {
-            "max-width": "96px",
-            "max-height": "96px",
-          },
-          "20%": {
-            "max-width": "30%",
-            "max-height": "110px",
-          },
-          "100%": { "max-width": "100%", "max-height": "230px" },
+          "0%": { "transform": "scale(0)", "opacity": "0" },
+          "100%": { "transform": "scale(1)", "opacity": "1" },
         },
-        fadeIn: {
-          "0%": { "opacity": "0" },
-          "50%": { "opacity": "0.05" },
-          "75%": { "opacity": "0.1" },
-          "100%": { "opacity": "1" },
+        shrink: {
+          "0%": { "transform": "scale(1)", "opacity": "1" },
+          "100%": { "transform": "scale(0)", "opacity": "0" },
         },
       },
       animation: {
-        expand: "expand 0.5s ease-in 1",
-        fadeIn: "fadeIn 0.75s ease-in 1",
+        expand: "expand 1s ease-in-out 1 normal forwards",
+        shrink: "expand 1s ease-in-out 1 reverse forwards",
       },
       fontFamily: {
         "monoton": ["Monoton", "sans-serif"],

@@ -1,4 +1,4 @@
-import { useState } from "https://esm.sh/preact@10.19.2/hooks";
+import { StateUpdater, useState } from "https://esm.sh/preact@10.19.2/hooks";
 
 interface Technology {
   name: string;
@@ -11,7 +11,8 @@ interface TechProps {
 }
 
 export function Technologies({ technologies }: TechProps) {
-  const [activeTech, setActiveTech] = useState("JavaScript");
+  const [activeTech, setActiveTech] = useState("Elixir");
+  const [prevTech, setPrevTech]: [string, StateUpdater<string>] = useState("");
 
   const techList = new Map(
     technologies.map((tech) => [tech.name, tech.description]),
@@ -19,6 +20,7 @@ export function Technologies({ technologies }: TechProps) {
 
   const handleTechClick = (tech: string) => () => {
     setActiveTech(tech);
+    setPrevTech(activeTech);
     return;
   };
 
@@ -28,26 +30,27 @@ export function Technologies({ technologies }: TechProps) {
         Tech I Use & Love:
       </h2>
       <div className="bg-white flex flex-row py-8 justify-evenly lg:justify-center">
-        <div className="bg-white max-w-xl flex justify-start flex-col lg:p-8 gap-4 lg:gap-8">
+        <div className="bg-white w-11/12 md:w-1/2 flex flex-col items-center lg:p-8 gap-4 lg:gap-8">
           {technologies.map((tech) => (
             <div
-              className={((activeTech === tech.name)
-                ? "shadow-brutal animate-expand"
-                : "shadow-brutal max-w-[96px]") +
-                " flex flex-row overflow-hidden bg-light-green rounded-lg p-4 items-center gap-4 md:max-h-[220px]"}
               onClick={handleTechClick(tech.name)}
+              className={(activeTech === tech.name
+                ? "w-full md:w-1/2 max-h-[400px]"
+                : "w-[156px] max-h-[156px]") +
+                " transition-all duration-700 self-center p-8 bg-light-green rounded-lg"}
             >
               <img
-                width="64"
-                height="64"
+                className="mx-auto"
+                width="90px"
+                height="90px"
                 src={tech.logo}
-                alt={tech.name + " logo."}
+                alt={tech.name}
               />
-              {(activeTech !== "" && activeTech === tech.name)
+              {activeTech === tech.name
                 ? (
-                  <div className="animate-fadeIn overflow-hidden bg-light-green max-w-[14rem] max-h-max lg:max-w-xl p-4 font-noto font-medium text-md leading-[1.35rem]">
+                  <p className="animate-expand text-center font-noto text-lg">
                     {techList.get(activeTech)}
-                  </div>
+                  </p>
                 )
                 : <></>}
             </div>

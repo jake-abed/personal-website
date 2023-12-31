@@ -1,5 +1,10 @@
 const technologies = [
     {
+        name: 'Elixir',
+        description: `Functional, concurrent, and fault tolerant!? Elixir, and it's Pheonix frameowork, are both powerful and a joy to work with. Pattern matching and the pipe operator are my absolute favorites now.`,
+        logo: '/badges/elixir.svg'
+    },
+    {
         name: 'JavaScript',
         description: `JavaScript may be quirky, but I adore it, warts and all. Thanks to its roots in both Functional Programming and OOP, it's given me a rock solid foundation for software and web development.`,
         logo: '/badges/javascript.svg'
