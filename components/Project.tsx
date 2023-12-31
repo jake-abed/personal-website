@@ -19,7 +19,7 @@ export function Project(props: ProjectProps) {
         <h3 className="font-bold font-noto">{props.name}</h3>
       </a>
       <p className="font-noto">{props.desc}</p>
-      <div className="flex mt-auto flex-cols gap-4 justify-center">
+      <div className="flex mt-auto flex-cols gap-4 pt-2 justify-center">
         {props.icons?.map((icon) => (
           <img
             className="flex-none"
@@ -35,7 +35,7 @@ export function Project(props: ProjectProps) {
           ? (
             <>
               <a
-                className="bg-black px-[7px] pt-[8px] pb-[6px] rounded-full absolute bottom-3 right-3"
+                className="bg-black px-[7px] pt-[8px] pb-[6px] rounded-full absolute bottom-4 right-4"
                 href={props.repoUrl}
               >
                 <img

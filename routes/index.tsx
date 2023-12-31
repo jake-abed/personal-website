@@ -38,7 +38,7 @@ export default function Home(props: PageProps<HomeProps>) {
         <Intro></Intro>
         <Technologies technologies={technologies} />
         <h2 className="font-noto bg-white text-center pt-8 pb-4 lg:pb-0 text-2xl leading-[1.6rem] font-extrabold">
-          Here Are A Few Projects!
+          I Made These Things!
         </h2>
         <div
           id="projects"

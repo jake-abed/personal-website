@@ -27,13 +27,13 @@ export function Technologies({ technologies }: TechProps) {
       <h2 className="font-noto bg-white text-center pt-8 pb-4 lg:pb-0 text-2xl leading-[1.6rem] font-extrabold">
         Tech I Use & Love:
       </h2>
-      <div className="bg-white flex flex-row py-8 justify-evenly lg:justify-center">
-        <div className="bg-white w-11/12 md:w-1/2 flex flex-col items-center lg:p-8 gap-4 lg:gap-8">
+      <div className="bg-white flex flex-row py-8 justify-center">
+        <div className="bg-white max-w-[600px] w-11/12 md:w-5/12 flex flex-col md:justify-center md:flex-row flex-wrap items-center lg:p-8 gap-4 lg:gap-12">
           {technologies.map((tech) => (
             <div
               onClick={handleTechClick(tech.name)}
               className={(activeTech === tech.name
-                ? "w-full md:w-1/2 max-h-[400px]"
+                ? "w-full md:w-1/2 max-h-[420px]"
                 : "w-[156px] max-h-[156px]") +
                 " transition-all shadow-brutal duration-1000 self-center p-8 bg-light-green rounded-lg"}
             >
@@ -46,7 +46,7 @@ export function Technologies({ technologies }: TechProps) {
               />
               {activeTech === tech.name
                 ? (
-                  <p className="animate-expand text-center font-noto text-lg">
+                  <p className="animate-expand pt-3 text-center font-noto text-lg leading-[1.35rem]">
                     {techList.get(activeTech)}
                   </p>
                 )
