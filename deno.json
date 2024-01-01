@@ -2,8 +2,8 @@
   "lock": false,
   "tasks": {
     "start": "deno run -A --unstable --watch=static/,routes/ dev.ts",
-    "build": "deno run -A dev.ts build",
-    "preview": "deno run -A main.ts"
+    "build": "deno run -A --unstable dev.ts build",
+    "preview": "deno run --unstable -A main.ts"
   },
   "compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact" },
   "imports": {
