@@ -7,10 +7,12 @@ export default {
       keyframes: {
         expand: {
           "0%": { "transform": "scale(0)", "opacity": "0" },
+          "80%": { "transform": "scale(0.8)", "opacity": "0"},
           "100%": { "transform": "scale(1)", "opacity": "1" },
         },
         shrink: {
           "0%": { "transform": "scale(1)", "opacity": "1" },
+          "70%": { "transform": "scale(0.7)", "opacity": "0"},
           "100%": { "transform": "scale(0)", "opacity": "0" },
         },
       },
