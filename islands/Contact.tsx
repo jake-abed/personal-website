@@ -58,7 +58,7 @@ export default function Contact() {
       <div className="max-w-2xl flex flex-col-reverse justify-center w-[90dvw] md:flex-row-reverse md:w-[60dvw] gap-6">
         <form
           id="contactme"
-          className="flex flex-col self-center max-w-xs shrink-0 bg-red shadow-brutal rounded-xl grow min-w-[300px] py-6 px-8 gap-4"
+          className="flex flex-col self-center w-full basis-auto shrink bg-red shadow-brutal rounded-xl grow py-6 px-8 gap-4"
           action="/api/contact"
         >
           <div className="flex flex-col gap-2 flex-auto">
@@ -135,7 +135,11 @@ export default function Contact() {
               type="button"
               name="submit"
               onClick={() => {
-                if (!validateContactForm()) return;
+                if (!validateContactForm()) {
+                  return setResp(
+                    "Hmmmm... looks like the form is invalid. Try again!",
+                  );
+                }
                 return sendEmail();
               }}
               disabled={sending}

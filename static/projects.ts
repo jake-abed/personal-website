@@ -15,6 +15,18 @@ const projects: Array<ProjectProps> = [
     repoUrl: "https://github.com/jake-abed/wtrmln",
   },
   {
+    name: "AOS Inventory Sync",
+    url: "#",
+    imagePath: "/inventory-sync.webp",
+    desc:
+      "A production web app to sync inventory between two disparate platforms. Features a REST API, lightweight Deno KV database, and a hand-rolled auth system.",
+    icons: [
+      "/badges/typescript.svg",
+      "/badges/deno.svg",
+      "/badges/tailwind.svg",
+    ],
+  },
+  {
     name: "Memories of Music",
     url: "https://memory-game-blush-eta.vercel.app/",
     imagePath: "/memories-of-music.webp",
@@ -26,18 +38,6 @@ const projects: Array<ProjectProps> = [
       "/badges/vite.svg",
     ],
     repoUrl: "https://github.com/jake-abed/memory-game",
-  },
-  {
-    name: "AOS Inventory Sync",
-    url: "#",
-    imagePath: "/inventory-sync.webp",
-    desc:
-      "A production web app to sync inventory between two disparate platforms. Features a REST API, lightweight Deno KV database, and a hand-rolled auth system.",
-    icons: [
-      "/badges/typescript.svg",
-      "/badges/deno.svg",
-      "/badges/tailwind.svg",
-    ],
   },
 ];
 

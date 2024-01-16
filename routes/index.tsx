@@ -1,6 +1,4 @@
-import type { Handlers, PageProps } from "$fresh/server.ts";
 import { Head } from "$fresh/runtime.ts";
-import { getCount } from "../utils/db.ts";
 import Header from "../components/Header.tsx";
 import { Project } from "../components/Project.tsx";
 import { Technologies } from "../islands/Technologies.tsx";
@@ -10,19 +8,7 @@ import Intro from "../islands/Intro.tsx";
 import { technologies } from "../static/technologies.js";
 import AboutMe from "../components/AboutMe.tsx";
 
-interface HomeProps {
-  start: number;
-}
-
-export const handler: Handlers<HomeProps> = {
-  async GET(_req, ctx) {
-    let start = await getCount();
-    if (start === null) start = 3;
-    return ctx.render({ start });
-  },
-};
-
-export default function Home(props: PageProps<HomeProps>) {
+export default function Home() {
   return (
     <>
       <Head>
@@ -37,8 +23,8 @@ export default function Home(props: PageProps<HomeProps>) {
         <Header />
         <Intro></Intro>
         <Technologies technologies={technologies} />
-        <h2 className="font-noto bg-white text-center pt-8 pb-4 text-3xl leading-[1.6rem] font-extrabold">
-          I Made These Things!
+        <h2 className="font-noto bg-white text-center pt-8 text-3xl leading-[1.6rem] font-extrabold">
+          I Made These Sites:
         </h2>
         <div
           id="projects"
