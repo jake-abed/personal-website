@@ -7,18 +7,12 @@ export default {
       keyframes: {
         expand: {
           "0%": { "transform": "scale(0)", "opacity": "0" },
-          "80%": { "transform": "scale(0.8)", "opacity": "0"},
+          "60%": { "transform": "scale(0.60)", "opacity": "0" },
           "100%": { "transform": "scale(1)", "opacity": "1" },
-        },
-        shrink: {
-          "0%": { "transform": "scale(1)", "opacity": "1" },
-          "70%": { "transform": "scale(0.7)", "opacity": "0"},
-          "100%": { "transform": "scale(0)", "opacity": "0" },
         },
       },
       animation: {
-        expand: "expand 1s ease-in-out 1 normal forwards",
-        shrink: "expand 1s ease-in-out 1 reverse forwards",
+        expand: "expand 1.25s ease-in-out 1 normal forwards",
       },
       fontFamily: {
         "monoton": ["Monoton", "sans-serif"],

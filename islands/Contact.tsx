@@ -1,4 +1,5 @@
 import { useState } from "https://esm.sh/preact@10.19.2/hooks";
+import { escapeHtml } from "https://deno.land/x/escape/mod.ts";
 
 export default function Contact() {
   const [sending, setSending] = useState(false);
@@ -22,7 +23,8 @@ export default function Contact() {
     headers.set("firstName", firstName.value);
     headers.set("lastName", lastName.value);
     headers.set("email", email.value);
-    headers.set("message", message.value);
+    console.log(escapeHtml(message.value));
+    headers.set("message", escapeHtml(message.value));
     const res = await fetch("/api/contact", {
       method: "POST",
       headers: headers,

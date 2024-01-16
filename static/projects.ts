@@ -39,32 +39,6 @@ const projects: Array<ProjectProps> = [
       "/badges/tailwind.svg",
     ],
   },
-  {
-    name: "Rock Paper Scissors Game",
-    url: "https://jake-abed.github.io/rock-paper-scissors/",
-    imagePath: "/rps-screenshot.webp",
-    desc:
-      "A simple, quick game of RPS. You play against the computer with first-to-five rules. All art and designs are original; the style was inspired by the old UNIX terminals I grew up with!",
-    icons: [
-      "/badges/html5.svg",
-      "/badges/css.svg",
-      "/badges/javascript.svg",
-    ],
-    repoUrl: "https://github.com/jake-abed/rock-paper-scissors",
-  },
-  {
-    name: "Book Library",
-    url: "https://jake-abed.github.io/book-library/",
-    imagePath: "/basilisk-library.webp",
-    desc:
-      "A small library app to store read books and more. It demonstrates an understanding of composition and separation of business logic from DOM manipulation.",
-    icons: [
-      "/badges/html5.svg",
-      "/badges/css.svg",
-      "/badges/javascript.svg",
-    ],
-    repoUrl: "https://github.com/jake-abed/book-library",
-  },
 ];
 
 export { projects };

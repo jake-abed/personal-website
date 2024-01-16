@@ -1,5 +1,6 @@
 import { Handlers } from "$fresh/server.ts";
 import { default as mailer } from "npm:@sendgrid/mail";
+import { unescapeHtml } from "https://deno.land/x/escape@1.4.2/mod.ts";
 
 interface ContactData {
   firstName: string | null;
@@ -16,13 +17,12 @@ export const handler: Handlers = {
       firstName: String(req.headers.get("firstName")),
       lastName: String(req.headers.get("lastName")),
       email: String(req.headers.get("email")),
-      message: String(req.headers.get("message")),
+      message: unescapeHtml(String(req.headers.get("message"))),
     };
 
     console.log(
       `Name: ${emailData.firstName} ${emailData.lastName}, Email: ${emailData.email}.`,
     );
-    console.log(req.referrer);
 
     if (emailData.email === "null" || emailData.email === null) {
       return new Response("Incorrect data.", { status: 400 });
