@@ -1,27 +1,27 @@
 const technologies = [
     {
         name: 'Elixir',
-        description: `Functional, concurrent, and fault tolerant!? Elixir, and it's Pheonix frameowork, are both powerful and a joy to work with. Pattern matching and the pipe operator are my absolute favorites now.`,
+        description: `Elixir is powerful and a joy to work with. Pattern matching and the pipe operator are amazing!`,
         logo: '/badges/elixir.svg'
     },
     {
         name: 'JavaScript',
-        description: `JavaScript may be quirky, but I adore it, warts and all. Thanks to its roots in both Functional Programming and OOP, it's given me a rock solid foundation for software and web development.`,
+        description: `JavaScript may be quirky, but I adore it. Learning JS has given me a rock solid foundation.`,
         logo: '/badges/javascript.svg'
     },
     {
         name: 'Deno',
-        description: `I'm liking the direction Deno is headed. Deno's native TypeScript support, web standards, and focus on security are what I crave. Also, the mascot is also too cute for its own good.`,
+        description: `I am something of a Deno fanboy! Native TypeScript and web standard support rock! Also, the mascot is too cute for its own good.`,
         logo: '/badges/deno.svg'
     },
     {
         name: 'Node.js',
-        description: `The king of the back-end for JS. Just like the language it runs, it seems to get a lot of flack on HackerNews, Twitter, and Reddit, but I love it all the same. Just don't tell it I love Deno more.`,
+        description: `Node.js seems to get a lot of flack on the internet, but I love it all the same. Just don't tell it I love Deno more.`,
         logo: '/badges/node.svg'
     },
     {
         name: 'React',
-        description: `Having built dynamic UIs without it, React has made frontend development faster. The fact they have started borrowing more from functional programming is amazing too.`,
+        description: `Having built dynamic UIs without it, React has made frontend development faster.`,
         logo: '/badges/react.svg'
     }
 ]
