@@ -19,7 +19,7 @@ export default {
         "noto": ['"Noto Sans"', "sans-serif"],
       },
       colors: {
-        "light-green": "#96E072",
+        "light-green": "#8EFF8E",
         "black": "#050517",
         "red": "#DE2A2A",
         "white": "#f0eff4",

@@ -3,7 +3,7 @@ import { asset } from "https://deno.land/x/fresh@1.5.2/runtime.ts";
 
 export default function App({ Component }: AppProps) {
   return (
-    <html lang="en" className="bg-red">
+    <html lang="en" className="bg-black">
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

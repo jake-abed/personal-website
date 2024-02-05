@@ -44,7 +44,7 @@ export default function Home() {
         </div>
         <Contact></Contact>
         <AboutMe />
-        <div className="static bottom-0 w-full p-4 mt-auto bg-red flex justify-center">
+        <div className="static bottom-0 w-full p-4 mt-auto bg-black flex justify-center">
           <a href="https://fresh.deno.dev">
             <img
               width="197"
