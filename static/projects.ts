@@ -3,7 +3,7 @@ import { ProjectProps } from "../utils/interfaces.ts";
 const projects: Array<ProjectProps> = [
   {
     name: "WTRMLN CHAT",
-    url: "https://wtrmln.fly.dev/",
+    url: "https://wtrmln.chat/",
     imagePath: "/wtrmln-chat.webp",
     desc:
       "Anonymous chat rooms built with Elixir and Phoenix. The rooms persist, but any user may choose to 'spit the seed' and eject all users from the room while deleting all messages.",
