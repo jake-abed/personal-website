@@ -5,6 +5,7 @@
 import * as $_app from "./routes/_app.tsx";
 import * as $api_contact from "./routes/api/contact.ts";
 import * as $index from "./routes/index.tsx";
+import * as $link_in_bio from "./routes/link-in-bio.tsx";
 import * as $Contact from "./islands/Contact.tsx";
 import * as $Intro from "./islands/Intro.tsx";
 import * as $Technologies from "./islands/Technologies.tsx";
@@ -15,6 +16,7 @@ const manifest = {
     "./routes/_app.tsx": $_app,
     "./routes/api/contact.ts": $api_contact,
     "./routes/index.tsx": $index,
+    "./routes/link-in-bio.tsx": $link_in_bio,
   },
   islands: {
     "./islands/Contact.tsx": $Contact,
