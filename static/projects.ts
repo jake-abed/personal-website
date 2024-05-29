@@ -2,6 +2,17 @@ import { ProjectProps } from "../utils/interfaces.ts";
 
 const projects: Array<ProjectProps> = [
   {
+    name: "Koku: A Void Ant",
+    url: "https://badhandbanana.itch.io/koku-a-void-ant",
+    imagePath: "/koku.webp",
+    desc:
+      "A mini metroidvania game made for Godot Wild Jame #69! Aside from the font & engine, all art, music, & code were made from scratch in 9 days by yours truly.",
+    icons: [
+      "/badges/godot.svg",
+    ],
+    repoUrl: "https://github.com/jake-abed/a-void-ant",
+  },
+  {
     name: "WTRMLN CHAT",
     url: "https://wtrmln.chat/",
     imagePath: "/wtrmln-chat.webp",

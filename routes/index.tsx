@@ -24,7 +24,7 @@ export default function Home() {
         <Intro></Intro>
         <Technologies technologies={technologies} />
         <h2 className="font-noto bg-white text-center pt-8 text-3xl leading-[1.6rem] font-extrabold">
-          I Made These Sites:
+          I Made These:
         </h2>
         <div
           id="projects"
