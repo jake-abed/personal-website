@@ -19,16 +19,16 @@ export default {
         "noto": ['"Noto Sans"', "sans-serif"],
       },
       colors: {
-        "light-green": "#8EFF8E",
-        "black": "#050517",
+        "light-green": "#A2FAA3",
+        "black": "#222725",
         "red": "#DE2A2A",
-        "white": "#f0eff4",
+        "white": "#F7EBE8",
       },
       boxShadow: {
-        "brutal": "3px 3px 0px 3px #050517",
-        "brutal-circle": "5px 5px 0px 2px #050517",
+        "brutal": "3px 3px 0px 3px #222725",
+        "brutal-circle": "5px 5px 0px 2px #222725",
         "brutal-red": "2px 2px 0px 2px #FF4242",
-        "brutal-light-green": "2px 2px 0px 2px #96E072",
+        "brutal-light-green": "2px 2px 0px 2px #A2FAA3",
       },
       dropShadow: {
         "text": "0px 0px 30px black",

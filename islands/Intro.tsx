@@ -22,12 +22,12 @@ export default function Intro() {
   }, [adjective]);
 
   return (
-    <div className="p-8 mx-auto w-full bg-white flex justify-center flex-col items-center lg:flex-row">
-      <div className="max-w-3xl bg-light-green shadow-brutal rounded-lg flex flex-col items-center justify-center lg:flex-row px-12 py-16">
+    <div className="p-8 mx-auto w-full bg-white flex justify-center flex-col items-center lg:py-24 lg:flex-row">
+      <div className="max-w-4xl bg-light-green shadow-brutal rounded-lg flex flex-col-reverse items-center justify-center gap-16 lg:flex-row px-12 py-16 lg:py-32 lg:px-24 lg:gap-24">
         <div>
           <h2
             id="intro-h2"
-            className="font-extrabold text-2xl font-noto leading-[1.6rem] pb-4"
+            className="font-extrabold text-2xl font-noto leading-[1.6rem] pb-4 lg:pt-12"
           >
             <span id="intro-adj">{adjective}</span> Web Development
           </h2>
@@ -36,7 +36,7 @@ export default function Intro() {
             learning and trying new things. Feel free to reach out via the form
             below or connect on one of the platforms below.
           </p>
-          <div className="p-8 flex flex-row gap-8 justify-center items-center lg:justify-start">
+          <div className="px-8 py-4 flex flex-row gap-8 justify-center items-center lg:justify-start">
             <a href="https://github.com/jake-abed">
               <img
                 src="/badges/github.svg"
@@ -64,7 +64,7 @@ export default function Intro() {
           </div>
         </div>
         <img
-          className="rounded-full h-48 w-48 shadow-brutal-circle"
+          className="rounded-full h-48 w-48 lg:h-64 lg:w-64 shadow-brutal-circle"
           src="/jake-pfp.webp"
           alt="A portrait of Jake Abed in a Dan Flash's inspired sweater."
         />

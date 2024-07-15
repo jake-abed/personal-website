@@ -24,10 +24,10 @@ export function Technologies({ technologies }: TechProps) {
 
   return (
     <>
-      <h2 className="font-noto bg-white text-center pt-8 pb-4 lg:pb-0 text-2xl leading-[1.6rem] font-extrabold">
+      <h2 className="font-noto bg-white text-center pt-8 pb-4 lg:pt-12 lg:pb-0 text-2xl leading-[1.6rem] font-extrabold">
         Tech I Use & Love:
       </h2>
-      <div className="bg-white flex flex-row py-8 justify-center">
+      <div className="bg-white flex flex-row py-8 justify-center lg:pb-16">
         <div className="bg-white max-w-[600px] w-11/12 md:w-5/12 flex flex-col md:justify-center md:flex-row flex-wrap items-center lg:p-8 gap-4 lg:gap-12">
           {technologies.map((tech) => (
             <div

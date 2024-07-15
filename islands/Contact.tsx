@@ -54,7 +54,7 @@ export default function Contact() {
   }
 
   return (
-    <div className="w-screen bg-white flex flex-col items-center justify-center px-4 py-16">
+    <div className="w-screen bg-white flex flex-col items-center justify-center px-4 py-16 lg:py-24">
       <div className="max-w-2xl flex flex-col-reverse justify-center w-[90dvw] md:flex-row-reverse md:w-[60dvw] gap-6">
         <form
           id="contactme"
@@ -70,7 +70,7 @@ export default function Contact() {
               First Name:
             </label>
             <input
-              className="flex-auto font-noto rounded-lg px-2 max-w-[300px] shadow-brutal valid:shadow-brutal-light-green focus-visible:outline-none"
+              className="flex-auto font-noto rounded-lg px-2 max-w-[300px] shadow-brutal bg-white valid:shadow-brutal-light-green focus-visible:outline-none"
               type="text"
               id="first-name"
               name="firstName"
@@ -86,7 +86,7 @@ export default function Contact() {
               Last Name:
             </label>
             <input
-              class="font-noto flex-auto rounded-lg px-2 max-w-[300px] shadow-brutal valid:shadow-brutal-light-green focus-visible:outline-none"
+              class="font-noto flex-auto rounded-lg px-2 max-w-[300px] shadow-brutal bg-white valid:shadow-brutal-light-green focus-visible:outline-none"
               type="text"
               id="last-name"
               name="lastName"
@@ -102,7 +102,7 @@ export default function Contact() {
               Email:
             </label>
             <input
-              class="flex-auto font-noto rounded-lg px-2 max-w-[300px] shadow-brutal valid:shadow-brutal-light-green focus-visible:outline-none"
+              class="flex-auto font-noto rounded-lg px-2 max-w-[300px] shadow-brutal bg-white valid:shadow-brutal-light-green focus-visible:outline-none"
               type="email"
               id="email"
               name="email"
@@ -118,7 +118,7 @@ export default function Contact() {
               Message:
             </label>
             <textarea
-              class="flex-auto font-noto py-1 px-2 rounded-lg shadow-brutal border-black valid:shadow-brutal-light-green focus-visible:outline-none"
+              class="flex-auto font-noto py-1 px-2 rounded-lg shadow-brutal border-black bg-white valid:shadow-brutal-light-green focus-visible:outline-none"
               id="message"
               name="message"
               minLength={5}

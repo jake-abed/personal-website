@@ -23,12 +23,12 @@ export default function Home() {
         <Header />
         <Intro></Intro>
         <Technologies technologies={technologies} />
-        <h2 className="font-noto bg-white text-center pt-8 text-3xl leading-[1.6rem] font-extrabold">
+        <h2 className="font-noto bg-white text-center pt-8 text-2xl leading-[1.6rem] font-extrabold">
           I Made These:
         </h2>
         <div
           id="projects"
-          className="bg-white flex justify-center py-16 lg:py-12 gap-6 flex-wrap"
+          className="bg-white flex justify-center py-16 lg:py-16 gap-6 flex-wrap"
         >
           <div className="lg:w-8/12 flex justify-center gap-6 flex-wrap">
             {projects.map((project) => {
