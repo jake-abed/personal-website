@@ -9,7 +9,7 @@ import * as $link_in_bio from "./routes/link-in-bio.tsx";
 import * as $Contact from "./islands/Contact.tsx";
 import * as $Intro from "./islands/Intro.tsx";
 import * as $Technologies from "./islands/Technologies.tsx";
-import { type Manifest } from "$fresh/server.ts";
+import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {

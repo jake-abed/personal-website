@@ -1,5 +1,5 @@
-import { useState } from "https://esm.sh/preact@10.19.2/hooks";
-import { escapeHtml } from "https://deno.land/x/escape/mod.ts";
+import { useState } from "preact/hooks";
+import { escapeHtml } from "https://deno.land/x/escape@1.4.2/mod.ts";
 
 export default function Contact() {
   const [sending, setSending] = useState(false);

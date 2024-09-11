@@ -1,4 +1,4 @@
-import { useState } from "https://esm.sh/preact@10.19.2/hooks";
+import { useState } from "preact/hooks";
 
 interface Technology {
   name: string;

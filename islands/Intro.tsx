@@ -1,4 +1,4 @@
-import { useEffect, useState } from "https://esm.sh/preact@10.19.2/hooks";
+import { useEffect, useState } from "preact/hooks";
 import { chooseRandomElement } from "../utils/helpers.ts";
 
 const webDevAdjectives = [
@@ -23,11 +23,11 @@ export default function Intro() {
 
   return (
     <div className="p-8 mx-auto w-full bg-white flex justify-center flex-col items-center lg:py-24 lg:flex-row">
-      <div className="max-w-4xl bg-light-green shadow-brutal rounded-lg flex flex-col-reverse items-center justify-center gap-16 lg:flex-row px-12 py-16 lg:py-32 lg:px-24 lg:gap-24">
+      <div className="max-w-4xl bg-light-green shadow-brutal rounded-lg flex flex-col-reverse items-center justify-center gap-16 lg:flex-row px-12 py-16 lg:py-28 lg:px-24 lg:gap-24">
         <div>
           <h2
             id="intro-h2"
-            className="font-extrabold text-2xl font-noto leading-[1.6rem] pb-4 lg:pt-12"
+            className="font-extrabold text-2xl font-noto leading-[1.6rem] pb-4 md:text-4xl lg:pt-12"
           >
             <span id="intro-adj">{adjective}</span> Web Development
           </h2>
