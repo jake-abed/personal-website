@@ -2,8 +2,20 @@ import { ProjectProps } from "../utils/interfaces.ts";
 
 const projects: Array<ProjectProps> = [
   {
+    name: "Geistfeld",
+    url: "https://genya-games.itch.io/geistfeld",
+    imagePath: "/geistfeld.webp",
+    desc:
+      "A top-down survival horror game featuring asynchronous multiplayer inspired by Dark Souls. Made for Godot Wild Jam #74. The game and server were made from scratch in 9 days!",
+    icons: [
+      "/badges/godot.svg",
+      "/badges/deno.svg",
+    ],
+    repoUrl: "https://github.com/jake-abed/geistfeld",
+  },
+  {
     name: "Koku: A Void Ant",
-    url: "https://badhandbanana.itch.io/koku-a-void-ant",
+    url: "https://genya-games.itch.io/koku-a-void-ant",
     imagePath: "/koku.webp",
     desc:
       "A mini metroidvania game made for Godot Wild Jame #69! Aside from the font & engine, all art, music, & code were made from scratch in 9 days by yours truly.",

@@ -3,7 +3,7 @@ import { ProjectProps } from "../utils/interfaces.ts";
 export function Project(props: ProjectProps) {
   return (
     <div
-      className={"max-w-xs rounded-lg gap-2 shadow-brutal relative " +
+      className={"max-w-xs rounded-lg gap-2 shadow-brutal-light-green relative " +
         props.className}
       id={props.id ? props.id : ""}
     >
@@ -35,7 +35,7 @@ export function Project(props: ProjectProps) {
           ? (
             <>
               <a
-                className="bg-black px-[7px] pt-[8px] pb-[6px] rounded-full absolute bottom-4 right-4"
+                className="bg-deep-black px-[7px] pt-[8px] pb-[6px] rounded-full absolute bottom-4 right-4"
                 href={props.repoUrl}
               >
                 <img

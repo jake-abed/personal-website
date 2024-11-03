@@ -54,11 +54,11 @@ export default function Contact() {
   }
 
   return (
-    <div className="w-screen bg-white flex flex-col items-center justify-center px-4 py-16 lg:py-24">
+    <div className="w-screen flex flex-col items-center justify-center px-4 py-16 lg:py-24">
       <div className="max-w-2xl flex flex-col-reverse justify-center w-[90dvw] md:flex-row-reverse md:w-[60dvw] gap-6">
         <form
           id="contactme"
-          className="flex flex-col self-center w-full basis-auto shrink bg-black shadow-brutal rounded-xl grow py-6 px-8 gap-4"
+          className="flex flex-col self-center w-full basis-auto shrink bg-deep-black shadow-brutal-light-green rounded-xl grow py-6 px-8 gap-4"
           action="/api/contact"
         >
           <div className="flex flex-col gap-2 flex-auto">
@@ -129,8 +129,8 @@ export default function Contact() {
           <div className="flex flex-col gap-2">
             <button
               className={sending
-                ? "flex-auto bg-white rounded-xl shadow-brutal font-noto font-semibold px-2 py-1 max-w-[300px] animate-pulse"
-                : "flex-auto bg-white rounded-xl shadow-brutal font-noto font-semibold px-2 py-1 max-w-[300px]"}
+                ? "text-deep-black flex-auto bg-white rounded-xl shadow-brutal font-noto font-semibold px-2 py-1 max-w-[300px] animate-pulse"
+                : "text-deep-black flex-auto bg-white rounded-xl shadow-brutal font-noto font-semibold px-2 py-1 max-w-[300px]"}
               id="submit-contact"
               type="button"
               name="submit"
@@ -148,20 +148,20 @@ export default function Contact() {
             </button>
           </div>
         </form>
-        <div className="flex bg-light-green flex-col justify-center rounded-lg shadow-brutal h-max px-8 py-4">
-          <h2 className="font-extrabold text-2xl text-right text-black font-noto leading-[1.6rem] pb-4">
+        <div className="flex bg-deep-black flex-col justify-center rounded-lg shadow-brutal-light-green h-max px-8 py-4">
+          <h2 className="font-extrabold text-2xl text-right font-noto leading-[1.6rem] pb-4">
             Contact Me.
           </h2>
-          <p className="text-right font-medium text-black font-noto leading-[1.35rem]">
+          <p className="text-right font-medium font-noto leading-[1.35rem]">
             Feel free to reach out about anything whatsoever!
           </p>
           <br />
-          <p className="text-right font-medium text-black font-noto leading-[1.35rem]">
+          <p className="text-right font-medium font-noto leading-[1.35rem]">
             Want to chat? Need help on a project? Have a job offer? Whatever the
             reason, I'm always happy to chat.
           </p>
           <br />
-          <p className="text-right font-medium text-black font-noto leading-[1.35rem]">
+          <p className="text-right font-medium font-noto leading-[1.35rem]">
             {resp}
           </p>
         </div>

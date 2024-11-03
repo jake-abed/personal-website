@@ -20,13 +20,15 @@ export default {
       },
       colors: {
         "light-green": "#A2FAA3",
-        "black": "#222725",
+        "black": "#29312D",
+        "deep-black": "#111A17",
         "red": "#DE2A2A",
-        "white": "#F7EBE8",
+        "white": "#E9FBEC",
       },
       boxShadow: {
         "brutal": "3px 3px 0px 3px #222725",
-        "brutal-circle": "5px 5px 0px 2px #222725",
+        "brutal-white": "3px 3px 0 3px #F7EBE8",
+        "brutal-circle": "5px 5px 0px 2px #A2FAA3",
         "brutal-red": "2px 2px 0px 2px #FF4242",
         "brutal-light-green": "2px 2px 0px 2px #A2FAA3",
       },

@@ -5,7 +5,7 @@ import { Technologies } from "../islands/Technologies.tsx";
 import Contact from "../islands/Contact.tsx";
 import { projects } from "../static/projects.ts";
 import Intro from "../islands/Intro.tsx";
-import { technologies } from "../static/technologies.js";
+import { technologies } from "../static/technologies.ts";
 import AboutMe from "../components/AboutMe.tsx";
 
 export default function Home() {
@@ -19,22 +19,22 @@ export default function Home() {
         >
         </meta>
       </Head>
-      <body className="w-screen min-h-screen flex flex-col bg-slate-900 overflow-x-hidden">
+      <body className="w-screen min-h-screen text-white flex flex-col bg-slate-900 overflow-x-hidden">
         <Header />
         <Intro></Intro>
         <Technologies technologies={technologies} />
-        <h2 className="font-noto bg-white text-center pt-8 text-2xl leading-[1.6rem] font-extrabold">
-          I Made These:
+        <h2 className="font-noto text-center pt-8 text-3xl leading-[1.6rem] font-extrabold">
+          I Made These
         </h2>
         <div
           id="projects"
-          className="bg-white flex justify-center py-16 lg:py-16 gap-6 flex-wrap"
+          className="flex justify-center py-16 lg:py-16 gap-6 flex-wrap"
         >
           <div className="lg:w-8/12 flex justify-center gap-6 flex-wrap">
             {projects.map((project) => {
               return (
                 <Project
-                  className="p-4 flex flex-col items-center bg-light-green flex-wrap"
+                  className="p-4 flex flex-col items-center bg-deep-black flex-wrap"
                   {...project}
                 >
                 </Project>
