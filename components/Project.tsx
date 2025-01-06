@@ -16,9 +16,9 @@ export function Project(props: ProjectProps) {
         </img>
       </a>
       <a target="_blank" href={props.url}>
-        <h3 className="font-bold font-noto">{props.name}</h3>
+        <h3 className="font-bold">{props.name}</h3>
       </a>
-      <p className="font-noto">{props.desc}</p>
+      <p>{props.desc}</p>
       <div className="flex mt-auto flex-cols gap-4 pt-2 justify-center">
         {props.icons?.map((icon) => (
           <img

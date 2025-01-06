@@ -15,8 +15,7 @@ export default {
         expand: "expand 1.25s ease-in-out 1 normal forwards",
       },
       fontFamily: {
-        "monoton": ["Monoton", "sans-serif"],
-        "noto": ['"Noto Sans"', "sans-serif"],
+        "fira": ["Fira Code", "mono"],
       },
       colors: {
         "light-green": "#A2FAA3",

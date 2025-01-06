@@ -24,7 +24,7 @@ export function Technologies({ technologies }: TechProps) {
 
   return (
     <>
-      <h2 className="font-noto bg-black text-center pt-8 pb-4 lg:pt-12 lg:pb-0 text-3xl leading-[1.6rem] font-extrabold">
+      <h2 className="bg-black text-center pt-8 pb-4 lg:pt-12 lg:pb-0 text-3xl leading-[1.6rem] font-extrabold">
         Tech I Use & Love
       </h2>
       <div className="bg-black flex flex-row py-8 justify-center lg:pb-16">
@@ -46,7 +46,7 @@ export function Technologies({ technologies }: TechProps) {
               />
               {activeTech === tech.name
                 ? (
-                  <p className="animate-expand pt-3 text-center font-noto text-lg leading-[1.35rem]">
+                  <p className="animate-expand pt-3 text-center text-md leading-[1.35rem]">
                     {techList.get(activeTech)}
                   </p>
                 )

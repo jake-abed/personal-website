@@ -2,13 +2,13 @@ const technologies = [
     {
         name: "Elixir",
         description:
-            `Elixir is powerful and a joy to work with. There is no such thing as a silver bullet, but Elixir gets pretty close. Pattern matching on function clauses is amazing!`,
+            `Elixir is powerful and a joy to work with. There is no such thing as a 'silver bullet', but Elixir gets pretty close. Pattern matching on function clauses is amazing!`,
         logo: "/badges/elixir.svg",
     },
     {
         name: "Go",
         description:
-            `Go drew me in early on, but I didn't really pick it up until recently. Recently I heard it described as 'Data-Oriented Programming' and that seems like a fair description. Plus concurrency, which is always a win.`,
+            `Go drew me in early on and never let go. I would describe it as elegantly inelegant. Plus easy concurrency, which is always a win.`,
         logo: "badges/go.svg",
     },
     {
@@ -32,7 +32,7 @@ const technologies = [
     {
         name: "React",
         description:
-            `Orignally, I taught myself front end development entirely using vanilla JS, HTML, and CSS. React is not perfect, but it does make a lot of things faster and more declarative when building user interfaces.`,
+            `I originally taught myself front end development entirely using vanilla JS, HTML, and CSS. Let's just say, I understand why React makes sense as an important abstraction.`,
         logo: "/badges/react.svg",
     },
 ];

@@ -3,7 +3,7 @@ import { escapeHtml } from "https://deno.land/x/escape@1.4.2/mod.ts";
 
 export default function Contact() {
   const [sending, setSending] = useState(false);
-  const [formValid, setValidity] = useState(false);
+  const [_formValid, setValidity] = useState(false);
   const [resp, setResp] = useState("");
 
   function validateContactForm() {
@@ -63,14 +63,14 @@ export default function Contact() {
         >
           <div className="flex flex-col gap-2 flex-auto">
             <label
-              className="font-noto font-bold text-white"
+              className="font-bold text-white"
               for="first-name"
               style="filter: drop-shadow(0px 0px 2px black);"
             >
               First Name:
             </label>
             <input
-              className="flex-auto font-noto rounded-lg px-2 max-w-[300px] shadow-brutal bg-white valid:shadow-brutal-light-green focus-visible:outline-none"
+              className="flex-auto text-black rounded-lg px-2 max-w-[300px] shadow-brutal bg-white valid:shadow-brutal-light-green focus-visible:outline-none"
               type="text"
               id="first-name"
               name="firstName"
@@ -80,13 +80,13 @@ export default function Contact() {
           <div className="flex flex-col gap-2">
             <label
               for="last-name"
-              className="font-noto font-bold text-white"
+              className="font-bold text-white"
               style="filter: drop-shadow(0px 0px 2px black);"
             >
               Last Name:
             </label>
             <input
-              class="font-noto flex-auto rounded-lg px-2 max-w-[300px] shadow-brutal bg-white valid:shadow-brutal-light-green focus-visible:outline-none"
+              class="flex-auto rounded-lg px-2 max-w-[300px] shadow-brutal bg-white valid:shadow-brutal-light-green focus-visible:outline-none"
               type="text"
               id="last-name"
               name="lastName"
@@ -96,13 +96,13 @@ export default function Contact() {
           <div className="flex flex-col gap-2">
             <label
               for="email"
-              className="font-noto font-bold text-white"
+              className="font-bold text-white"
               style="filter: drop-shadow(0px 0px 2px black);"
             >
               Email:
             </label>
             <input
-              class="flex-auto font-noto rounded-lg px-2 max-w-[300px] shadow-brutal bg-white valid:shadow-brutal-light-green focus-visible:outline-none"
+              class="flex-auto rounded-lg px-2 max-w-[300px] shadow-brutal bg-white valid:shadow-brutal-light-green focus-visible:outline-none"
               type="email"
               id="email"
               name="email"
@@ -112,13 +112,13 @@ export default function Contact() {
           <div className="flex flex-col gap-2">
             <label
               for="message"
-              className="font-noto font-bold text-white"
+              className="font-bold text-white"
               style="filter: drop-shadow(0px 0px 2px black);"
             >
               Message:
             </label>
             <textarea
-              class="flex-auto font-noto py-1 px-2 rounded-lg shadow-brutal border-black bg-white valid:shadow-brutal-light-green focus-visible:outline-none"
+              class="flex-auto py-1 px-2 rounded-lg shadow-brutal border-black bg-white valid:shadow-brutal-light-green focus-visible:outline-none"
               id="message"
               name="message"
               minLength={5}
@@ -129,8 +129,8 @@ export default function Contact() {
           <div className="flex flex-col gap-2">
             <button
               className={sending
-                ? "text-deep-black flex-auto bg-white rounded-xl shadow-brutal font-noto font-semibold px-2 py-1 max-w-[300px] animate-pulse"
-                : "text-deep-black flex-auto bg-white rounded-xl shadow-brutal font-noto font-semibold px-2 py-1 max-w-[300px]"}
+                ? "text-deep-black flex-auto bg-white rounded-xl shadow-brutal font-semibold px-2 py-1 max-w-[300px] animate-pulse"
+                : "text-deep-black flex-auto bg-white rounded-xl shadow-brutal font-semibold px-2 py-1 max-w-[300px]"}
               id="submit-contact"
               type="button"
               name="submit"
@@ -149,19 +149,19 @@ export default function Contact() {
           </div>
         </form>
         <div className="flex bg-deep-black flex-col justify-center rounded-lg shadow-brutal-light-green h-max px-8 py-4">
-          <h2 className="font-extrabold text-2xl text-right font-noto leading-[1.6rem] pb-4">
+          <h2 className="font-extrabold text-2xl text-right leading-[1.6rem] pb-4">
             Contact Me.
           </h2>
-          <p className="text-right font-medium font-noto leading-[1.35rem]">
+          <p className="text-right font-medium leading-[1.35rem]">
             Feel free to reach out about anything whatsoever!
           </p>
           <br />
-          <p className="text-right font-medium font-noto leading-[1.35rem]">
+          <p className="text-right font-medium leading-[1.35rem]">
             Want to chat? Need help on a project? Have a job offer? Whatever the
             reason, I'm always happy to chat.
           </p>
           <br />
-          <p className="text-right font-medium font-noto leading-[1.35rem]">
+          <p className="text-right font-medium leading-[1.35rem]">
             {resp}
           </p>
         </div>

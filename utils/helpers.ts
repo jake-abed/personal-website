@@ -1,5 +1,4 @@
-// deno-lint-ignore no-explicit-any
-const chooseRandomElement = (list: Array<any>) => {
+function chooseRandomElement<T>(list: T[]): T {
   return list[Math.floor(Math.random() * list.length)];
 };
 

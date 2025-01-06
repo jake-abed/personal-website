@@ -21,10 +21,10 @@ export default function AboutMe() {
   return (
     <div className="w-full flex flex-col justify-center items-center gap-8 p-12 pt-8">
       <div className="max-w-[800px] rounded-xl shadow-brutal-light-green bg-deep-black p-4">
-        <h2 className="font-noto font-extrabold pb-8 text-center text-2xl">
+        <h2 className="font-extrabold pb-8 text-center text-2xl">
           About Me
         </h2>
-        <p className="font-medium font-noto leading-[1.35rem]">
+        <p className="font-medium leading-[1.35rem]">
           Aside from coding, I keep myself busy with making video games,
           cycling, listening to music, playing music, making gelato, playing
           video games, backpacking, and hanging out with my lovely cats.
@@ -41,7 +41,7 @@ export default function AboutMe() {
               alt={img.text}
             />
             <div class="relative z-0 max-w-[400px] shadow-brutal-light-green bg-deep-black p-4 rounded-lg">
-              <p className="font-noto font-semibold">{img.text}</p>
+              <p className="font-semibold">{img.text}</p>
             </div>
           </div>
         ))}

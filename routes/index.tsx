@@ -19,11 +19,11 @@ export default function Home() {
         >
         </meta>
       </Head>
-      <body className="w-screen min-h-screen text-white flex flex-col bg-slate-900 overflow-x-hidden">
+      <body className="w-screen min-h-screen text-white flex font-fira flex-col bg-slate-900 overflow-x-hidden">
         <Header />
         <Intro></Intro>
         <Technologies technologies={technologies} />
-        <h2 className="font-noto text-center pt-8 text-3xl leading-[1.6rem] font-extrabold">
+        <h2 className="text-center pt-8 text-3xl leading-[1.6rem] font-extrabold">
           I Made These
         </h2>
         <div

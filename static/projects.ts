@@ -2,6 +2,17 @@ import { ProjectProps } from "../utils/interfaces.ts";
 
 const projects: Array<ProjectProps> = [
   {
+    name: "Lore CLI",
+    url: "https://github.com/jake-abed/lore",
+    imagePath: "/lore.webp",
+    desc:
+      "A CLI for managing custom campaign information for Dungeon Masters. Born out of frustration with World Anvil and a desire to organize my campaigns in a way that made sense to me.",
+    icons: [
+      "/badges/go.svg"
+    ],
+    repoUrl: "https://github.com/jake-abed/lore",
+  },
+  {
     name: "Geistfeld",
     url: "https://genya-games.itch.io/geistfeld",
     imagePath: "/geistfeld.webp",
@@ -42,26 +53,13 @@ const projects: Array<ProjectProps> = [
     url: "#",
     imagePath: "/inventory-sync.webp",
     desc:
-      "A production web app to sync inventory between two disparate platforms. Features a REST API, lightweight Deno KV database, and a hand-rolled auth system.",
+      "A production web app to sync inventory between two disparate platforms. Features a RESTful API, lightweight Deno KV database, and a hand-rolled auth system.",
     icons: [
       "/badges/typescript.svg",
       "/badges/deno.svg",
       "/badges/tailwind.svg",
     ],
-  },
-  {
-    name: "Memories of Music",
-    url: "https://memory-game-blush-eta.vercel.app/",
-    imagePath: "/memories-of-music.webp",
-    desc:
-      "A fun React app that grabs album art from lastFM's API to play a memory card game. Custom React hooks abound in this project! All of the albums are personal favorites too.",
-    icons: [
-      "/badges/react.svg",
-      "/badges/javascript.svg",
-      "/badges/vite.svg",
-    ],
-    repoUrl: "https://github.com/jake-abed/memory-game",
-  },
+  }, 
 ];
 
 export { projects };

@@ -7,7 +7,6 @@ import * as $api_contact from "./routes/api/contact.ts";
 import * as $index from "./routes/index.tsx";
 import * as $link_in_bio from "./routes/link-in-bio.tsx";
 import * as $Contact from "./islands/Contact.tsx";
-import * as $Intro from "./islands/Intro.tsx";
 import * as $Technologies from "./islands/Technologies.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
@@ -20,7 +19,6 @@ const manifest = {
   },
   islands: {
     "./islands/Contact.tsx": $Contact,
-    "./islands/Intro.tsx": $Intro,
     "./islands/Technologies.tsx": $Technologies,
   },
   baseUrl: import.meta.url,
