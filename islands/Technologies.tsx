@@ -24,11 +24,11 @@ export function Technologies({ technologies }: TechProps) {
 
   return (
     <>
-      <h2 className="bg-black text-center pt-8 pb-4 lg:pt-12 lg:pb-0 text-3xl leading-[1.6rem] font-extrabold">
+      <h2 className="bg-black text-center pt-8 pb-4 lg:pt-12 lg:pb-0 text-3xl leading-[1.2rem] font-extrabold">
         Tech I Use & Love
       </h2>
-      <div className="bg-black flex flex-row py-8 justify-center lg:pb-16">
-        <div className="max-w-[600px] w-11/12 md:w-5/12 flex flex-col md:justify-center md:flex-row flex-wrap items-center lg:p-8 gap-4 lg:gap-12">
+      <div className="bg-black flex flex-row py-8 justify-center">
+        <div className="max-w-[600px] w-11/12 md:w-5/12 flex flex-col md:justify-center md:flex-row flex-wrap items-center lg:p-8 gap-6 lg:gap-12">
           {technologies.map((tech) => (
             <div
               onClick={handleTechClick(tech.name)}
@@ -46,7 +46,7 @@ export function Technologies({ technologies }: TechProps) {
               />
               {activeTech === tech.name
                 ? (
-                  <p className="animate-expand pt-3 text-center text-md leading-[1.35rem]">
+                  <p className="animate-expand pt-3 text-center text-md leading-[1.2rem]">
                     {techList.get(activeTech)}
                   </p>
                 )

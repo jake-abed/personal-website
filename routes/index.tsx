@@ -4,7 +4,7 @@ import { Project } from "../components/Project.tsx";
 import { Technologies } from "../islands/Technologies.tsx";
 import Contact from "../islands/Contact.tsx";
 import { projects } from "../static/projects.ts";
-import Intro from "../islands/Intro.tsx";
+import Intro from "../components/Intro.tsx";
 import { technologies } from "../static/technologies.ts";
 import AboutMe from "../components/AboutMe.tsx";
 
@@ -22,13 +22,12 @@ export default function Home() {
       <body className="w-screen min-h-screen text-white flex font-fira flex-col bg-slate-900 overflow-x-hidden">
         <Header />
         <Intro></Intro>
-        <Technologies technologies={technologies} />
         <h2 className="text-center pt-8 text-3xl leading-[1.6rem] font-extrabold">
           I Made These
         </h2>
         <div
           id="projects"
-          className="flex justify-center py-16 lg:py-16 gap-6 flex-wrap"
+          className="flex justify-center py-12 lg:py-12 pb-8 gap-6 flex-wrap"
         >
           <div className="lg:w-8/12 flex justify-center gap-6 flex-wrap">
             {projects.map((project) => {
@@ -42,6 +41,7 @@ export default function Home() {
             })}
           </div>
         </div>
+        <Technologies technologies={technologies} />
         <Contact></Contact>
         <AboutMe />
         <div className="static bottom-0 w-full p-4 mt-auto bg-black flex justify-center">

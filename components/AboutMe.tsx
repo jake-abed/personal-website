@@ -19,8 +19,8 @@ export default function AboutMe() {
   ];
 
   return (
-    <div className="w-full flex flex-col justify-center items-center gap-8 p-12 pt-8">
-      <div className="max-w-[800px] rounded-xl shadow-brutal-light-green bg-deep-black p-4">
+    <div className="w-full flex flex-col justify-center items-center gap-8 p-4">
+      <div className="max-w-[800px] rounded-xl shadow-brutal-light-green bg-deep-black p-8 lg:p-16">
         <h2 className="font-extrabold pb-8 text-center text-2xl">
           About Me
         </h2>

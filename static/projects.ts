@@ -6,9 +6,9 @@ const projects: Array<ProjectProps> = [
     url: "https://github.com/jake-abed/lore",
     imagePath: "/lore.webp",
     desc:
-      "A CLI for managing custom campaign information for Dungeon Masters. Born out of frustration with World Anvil and a desire to organize my campaigns in a way that made sense to me.",
+      "A CLI for managing custom campaign information for dungeon masters. Born out of frustration with existing tools (and my handwriting) and a desire to organize my campaigns better.",
     icons: [
-      "/badges/go.svg"
+      "/badges/go.svg",
     ],
     repoUrl: "https://github.com/jake-abed/lore",
   },
@@ -59,7 +59,7 @@ const projects: Array<ProjectProps> = [
       "/badges/deno.svg",
       "/badges/tailwind.svg",
     ],
-  }, 
+  },
 ];
 
 export { projects };
