@@ -1,0 +1,18 @@
+:root {
+  --white: #FAF9F6;
+  --black: #1A1A1A;
+}
+
+html {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+html.dark {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.dark .nav-links a {
+  color: var(--white);
+}
