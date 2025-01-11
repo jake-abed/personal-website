@@ -1,5 +1,2 @@
 .DS_Store
 .vscode/
-
-# Fresh build directory
-_fresh/
