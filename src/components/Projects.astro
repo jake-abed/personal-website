@@ -1,11 +1,11 @@
 ---
 ---
-<div class="projects">
-  <p>Projects Go Here!</p>
+<div class="project">
+  <h3>Lore CLI</h3>
 </div>
 
 <style>
-  .projects {
+  .project {
     display: flex;
     opacity: 0;
     flex-direction: row;
@@ -17,6 +17,38 @@
     border-radius: 1rem;
     box-shadow: inset 0px 0px 8px 2px var(--transparent-pink);
     max-width: min(800px, 95dvw);
+  }
+
+  .project.animation {
     animation: 1s ease-in-out 0.05s 1 forwards fade-in-up;
   }
 </style>
+
+<script>
+  function handleIntersect(entries) {
+    entries.forEach((entry) => {
+      const el = entry.target;
+
+      if (entry.intersectionRatio >= 0.8) {
+        el.classList.add("animation");
+      }
+    });
+  }
+
+  function createObserver(elements) {
+    const opts = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 1.0,
+    };
+
+    const observer = new IntersectionObserver(handleIntersect, opts);
+
+    for (const element of elements) {
+      console.log("Observing: ", element);
+      observer.observe(element);
+    }
+  }
+
+  createObserver(document.querySelectorAll(".project"));
+</script>
