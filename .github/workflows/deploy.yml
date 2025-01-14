@@ -40,3 +40,5 @@ jobs:
           project: "jakeabed-personal-we-56"
           entrypoint: "server/entry.mjs"
           root: "dist"
+          
+          
